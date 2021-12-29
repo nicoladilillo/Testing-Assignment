@@ -19,3 +19,492 @@
 # Compile of NangateOpenCellLibrary.v was successful.
 # Compile of phase_shifter.vhd was successful.
 # 5 compiles, 0 failed with no errors.
+vsim work.lbist_testbench -t ns
+# vsim work.lbist_testbench -t ns 
+# Start time: 19:47:54 on Dec 29,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(52813): (vopt-2685) [TFMPC] - Too few port connections for 'U296'.  Expected 2, found 1.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(52813): (vopt-2718) [TFMPC] - Missing connection for port 'ZN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(55095): (vopt-2685) [TFMPC] - Too few port connections for 'L0_buffer_i'.  Expected 25, found 24.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(55095): (vopt-2718) [TFMPC] - Missing connection for port 'valid_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(35295): (vopt-2685) [TFMPC] - Too few port connections for 'U320'.  Expected 2, found 1.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(35295): (vopt-2718) [TFMPC] - Missing connection for port 'ZN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36868): (vopt-2685) [TFMPC] - Too few port connections for 'U26'.  Expected 2, found 1.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36868): (vopt-2718) [TFMPC] - Missing connection for port 'ZN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36892): (vopt-2685) [TFMPC] - Too few port connections for 'irq_id_q_reg_4_'.  Expected 7, found 6.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36892): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(50670): (vopt-2685) [TFMPC] - Too few port connections for 'data_we_ex_o_reg'.  Expected 7, found 6.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(50670): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2685) [TFMPC] - Too few port connections for 'decoder_i'.  Expected 80, found 72.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'apu_en_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'scalar_replication_c_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'reg_fp_d_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'reg_fp_c_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'reg_fp_b_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'reg_fp_a_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'uret_dec_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51368): (vopt-2718) [TFMPC] - Missing connection for port 'instr_multicycle_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51417): (vopt-2685) [TFMPC] - Too few port connections for 'controller_i'.  Expected 109, found 106.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51417): (vopt-2718) [TFMPC] - Missing connection for port 'misaligned_stall_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51417): (vopt-2718) [TFMPC] - Missing connection for port 'debug_mode_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51417): (vopt-2718) [TFMPC] - Missing connection for port 'apu_stall_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33615): (vopt-2685) [TFMPC] - Too few port connections for 'U5123'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33615): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33623): (vopt-2685) [TFMPC] - Too few port connections for 'U5130'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33623): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33625): (vopt-2685) [TFMPC] - Too few port connections for 'U5132'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33625): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33627): (vopt-2685) [TFMPC] - Too few port connections for 'U5134'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33627): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33631): (vopt-2685) [TFMPC] - Too few port connections for 'U5138'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33631): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33643): (vopt-2685) [TFMPC] - Too few port connections for 'U5147'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33643): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33655): (vopt-2685) [TFMPC] - Too few port connections for 'U5157'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33655): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33664): (vopt-2685) [TFMPC] - Too few port connections for 'U5164'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33664): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33665): (vopt-2685) [TFMPC] - Too few port connections for 'U5165'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33665): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33666): (vopt-2685) [TFMPC] - Too few port connections for 'U5166'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33666): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33674): (vopt-2685) [TFMPC] - Too few port connections for 'U5172'.  Expected 4, found 3.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33674): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33676): (vopt-2685) [TFMPC] - Too few port connections for 'U5174'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33676): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33679): (vopt-2685) [TFMPC] - Too few port connections for 'U5177'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33679): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33681): (vopt-2685) [TFMPC] - Too few port connections for 'U5179'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33681): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33682): (vopt-2685) [TFMPC] - Too few port connections for 'U5180'.  Expected 5, found 4.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(33682): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(34007): (vopt-2685) [TFMPC] - Too few port connections for 'U89'.  Expected 2, found 1.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(34007): (vopt-2718) [TFMPC] - Missing connection for port 'ZN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(25): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(25): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(402): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(402): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(389): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(389): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(376): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(376): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(363): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(363): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(350): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(350): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(337): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(337): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(324): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(324): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(311): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(311): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(298): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(298): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(285): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(285): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(272): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(272): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(259): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(259): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(246): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(246): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(233): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(233): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(220): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(220): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(207): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(207): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(194): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(194): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(181): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(181): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(168): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(168): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(155): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(155): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(142): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(142): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(129): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(129): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(116): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(116): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(103): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(103): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(90): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(90): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(64): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(64): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(38): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(38): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57469): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57469): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58080): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58080): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58067): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58067): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58054): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58054): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58041): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58041): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58028): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58028): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58015): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58015): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58002): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58002): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57989): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57989): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57976): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57976): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57963): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57963): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57950): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57950): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57937): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57937): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57924): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57924): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57911): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57911): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57898): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57898): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57885): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57885): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57872): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57872): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57859): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57859): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57846): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57846): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57833): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57833): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57820): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57820): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57807): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57807): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57794): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57794): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57781): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57781): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57768): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57768): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57755): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57755): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57742): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57742): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57729): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57729): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57716): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57716): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57703): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57703): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57690): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57690): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57677): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57677): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57664): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57664): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57651): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57651): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57638): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57638): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57625): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57625): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57612): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57612): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57599): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57599): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57586): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57586): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57573): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57573): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57560): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57560): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57547): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57547): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57534): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57534): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57521): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57521): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57508): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57508): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57495): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57495): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57482): (vopt-2685) [TFMPC] - Too few port connections for 'dtc_reg'.  Expected 6, found 5.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57482): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58551): (vopt-2685) [TFMPC] - Too few port connections for 'if_stage_i'.  Expected 47, found 46.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58551): (vopt-2718) [TFMPC] - Missing connection for port 'is_fetch_failed_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58577): (vopt-2685) [TFMPC] - Too few port connections for 'id_stage_i'.  Expected 158, found 155.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58577): (vopt-2718) [TFMPC] - Missing connection for port 'debug_mode_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58577): (vopt-2718) [TFMPC] - Missing connection for port 'apu_perf_dep_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58577): (vopt-2718) [TFMPC] - Missing connection for port 'apu_en_ex_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2685) [TFMPC] - Too few port connections for 'ex_stage_i'.  Expected 82, found 72.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_master_ready_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_master_req_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_ready_wb_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_busy_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_perf_wb_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_perf_cont_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_perf_type_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_write_dep_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'apu_read_dep_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58745): (vopt-2718) [TFMPC] - Missing connection for port 'fpu_fflags_we_o'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2685) [TFMPC] - Too few port connections for 'RISCY_PMP_pmp_unit_i'.  Expected 88, found 83.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2718) [TFMPC] - Missing connection for port 'instr_addr_o_0_'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2718) [TFMPC] - Missing connection for port 'instr_addr_o_1_'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2718) [TFMPC] - Missing connection for port 'instr_addr_o_2_'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2718) [TFMPC] - Missing connection for port 'instr_addr_o_3_'.
+# ** Warning: /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58951): (vopt-2718) [TFMPC] - Missing connection for port 'instr_err_o'.
+# Loading std.standard
+# Loading std.env(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.lbist_testbench(tb)#1
+# Loading work.lfsr(fast)
+# Loading work.riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800(fast)
+# Loading work.CLKBUF_X1(fast)
+# Loading work.AND2_X1(fast)
+# Loading work.OR2_X1(fast)
+# Loading work.INV_X1(fast)
+# Loading work.NOR2_X1(fast)
+# Loading work.AOI21_X1(fast)
+# Loading work.AND3_X1(fast)
+# Loading work.SDFFR_X1(fast)
+# Loading work.CLKGATETST_X1(fast)
+# Loading work.AOI22_X1(fast)
+# Loading work.NAND2_X1(fast)
+# Loading work.BUF_X1(fast)
+# Loading work.BUF_X2(fast)
+# Loading work.AND4_X1(fast)
+# Loading work.NAND3_X1(fast)
+# Loading work.NOR3_X1(fast)
+# Loading work.OR2_X2(fast)
+# Loading work.NAND4_X1(fast)
+# Loading work.XOR2_X1(fast)
+# Loading work.OAI211_X1(fast)
+# Loading work.XNOR2_X1(fast)
+# Loading work.OAI21_X1(fast)
+# Loading work.AND2_X2(fast)
+# Loading work.HA_X1(fast)
+# Loading work.SDFFS_X1(fast)
+# Loading work.SDFFR_X2(fast)
+# Loading work.CLKBUF_X3(fast)
+# Loading work.INV_X2(fast)
+# Loading work.NOR2_X2(fast)
+# Loading work.MUX2_X1(fast)
+# Loading work.OAI21_X2(fast)
+# Loading work.OR3_X1(fast)
+# Loading work.OAI22_X1(fast)
+# Loading work.NOR4_X1(fast)
+# Loading work.AOI211_X1(fast)
+# Loading work.NAND3_X2(fast)
+# Loading work.NAND2_X2(fast)
+# Loading work.BUF_X4(fast)
+# Loading work.AOI21_X2(fast)
+# Loading work.INV_X4(fast)
+# Loading work.OAI221_X1(fast)
+# Loading work.OAI33_X1(fast)
+# Loading work.AOI221_X1(fast)
+# Loading work.OAI211_X2(fast)
+# Loading work.FA_X1(fast)
+# Loading work.AOI222_X1(fast)
+# Loading work.OAI222_X1(fast)
+# Loading work.CLKBUF_X2(fast)
+# Loading work.OR4_X1(fast)
+# Loading work.AND2_X4(fast)
+# Loading work.AOI211_X2(fast)
+# Loading work.OAI22_X2(fast)
+# Loading work.NAND4_X4(fast)
+# Loading work.MUX2_X2(fast)
+# Loading work.AND4_X2(fast)
+# Loading work.XNOR2_X2(fast)
+# Loading work.NAND2_X4(fast)
+# Loading work.NOR2_X4(fast)
+# Loading work.OR4_X2(fast)
+# Loading work.SDFF_X1(fast)
+# Loading work.INV_X32(fast)
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(52813): [TFMPC] - Too few port connections. Expected 2, found 1.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/prefetch_128_prefetch_buffer_i/L0_buffer_i/U296 File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(50670): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/id_stage_i/data_we_ex_o_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(35295): [TFMPC] - Too few port connections. Expected 2, found 1.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/id_stage_i/controller_i/U320 File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36868): [TFMPC] - Too few port connections. Expected 2, found 1.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/id_stage_i/int_controller_i/U26 File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(36892): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/id_stage_i/int_controller_i/irq_id_q_reg_4_ File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(34007): [TFMPC] - Too few port connections. Expected 2, found 1.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/ex_stage_i/U89 File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(25): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_48/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(402): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_49/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(389): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_50/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(376): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_51/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(363): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_52/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(350): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_53/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(337): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_54/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(324): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_55/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(311): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_56/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(298): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_57/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(285): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_58/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(272): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_59/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(259): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_60/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(246): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_61/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(233): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_62/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(220): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_63/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(207): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_64/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_65/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(181): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_66/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(168): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_67/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(155): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_68/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(142): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_69/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(129): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_70/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(116): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_71/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(103): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_72/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(90): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_73/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(77): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_74/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(64): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_75/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(51): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_76/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(38): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/RISCY_PMP_pmp_unit_i/U_dft_tp_sdtc_ip_77/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57469): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_0/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58080): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_1/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58067): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_2/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58054): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_3/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58041): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_4/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58028): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_5/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58015): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_6/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(58002): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_7/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57989): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_8/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57976): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_9/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57963): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_10/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57950): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_11/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57937): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_12/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57924): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_13/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57911): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_14/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57898): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_15/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57885): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_16/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57872): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_17/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57859): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_18/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57846): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_19/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57833): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_20/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57820): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_21/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57807): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_22/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57794): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_23/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57781): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_24/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57768): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_25/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57755): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_26/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57742): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_27/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57729): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_28/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57716): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_29/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57703): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_30/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57690): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_31/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57677): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_32/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57664): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_33/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57651): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_34/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57638): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_35/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57625): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_36/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57612): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_37/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57599): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_38/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57586): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_39/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57573): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_40/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57560): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_41/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57547): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_42/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57534): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_43/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57521): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_44/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57508): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_45/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57495): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_46/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) /home/s284963/riscv_testing_2021_zoix/syn/output/riscv_core_scan.v(57482): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800_U_dft_tp_sdtc_ip_47/dtc_reg File: /home/s284963/NangateOpenCellLibrary.v
+add wave -position insertpoint sim:/lbist_testbench/PS/line__19/*
+# (vish-4014) No objects found matching 'sim:/lbist_testbench/PS/line__19/*'.
+add wave -position insertpoint sim:/lbist_testbench/PS/line__19/*
+# (vish-4014) No objects found matching 'sim:/lbist_testbench/PS/line__19/*'.
+add wave -position insertpoint sim:/lbist_testbench/stimuli/*
+add wave -position insertpoint sim:/lbist_testbench/FSM/*
+# (vish-4014) No objects found matching 'sim:/lbist_testbench/FSM/*'.
+add wave -position insertpoint sim:/lbist_testbench/FSM/*
+# (vish-4014) No objects found matching 'sim:/lbist_testbench/FSM/*'.
+add wave -position insertpoint sim:/lbist_testbench/stimuli/*
+run
