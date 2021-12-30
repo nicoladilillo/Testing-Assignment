@@ -29,6 +29,24 @@ remove_pi_constraints test_si14
 remove_pi_constraints test_si15
 remove_pi_constraints test_si16
 
+add_po_masks -all
+remove_po_masks   test_so1
+remove_po_masks   test_so2
+remove_po_masks   test_so3
+remove_po_masks   test_so4
+remove_po_masks   test_so5
+remove_po_masks   test_so6
+remove_po_masks   data_we_o
+remove_po_masks   irq_id_o[4]
+remove_po_masks   test_so9
+remove_po_masks   test_so10
+remove_po_masks   test_so11
+remove_po_masks   test_so12
+remove_po_masks   test_so13
+remove_po_masks   test_so14
+remove_po_masks   test_so15
+remove_po_masks   test_so16
+
 run_drc ../syn/output/riscv_core_scan.spf
 
 set_faults -model stuck
@@ -37,6 +55,6 @@ add_faults -all
 set_patterns -internal
 run_atpg -auto_compression 
 
-# write_patterns patterns_update.stil -internal -replace -format stil
+write_patterns patterns.stil -internal -replace -format stil
 
 quit

@@ -19,8 +19,7 @@ def update_lfsr(lfsr_equation):
     lfsr_equation[M] = app
 
 # scan1 is 195, others are 194
-N = 16
-
+N = 16 # number of scan chains
 scan_chain = [0] * N
 
 for i in range(N):
@@ -41,13 +40,13 @@ count = 0
 for line in fp:
     # load seed for lfsr
     for i in range(M+1):
-        lfsr_equation[M-i] = int(line[i])
+        lfsr_equation[i] = int(line[i])
     
     # first not used
     update_lfsr(lfsr_equation)
 
     # how many cycle for seed
-    for j in range(200):
+    for j in range(500):
         # chain1 is one more long and all other waste 1 lfsr value
         for i in range(M-1):
             app_chain1 = XOR3(lfsr_equation[i], lfsr_equation[i+1], lfsr_equation[i+2])
@@ -67,7 +66,24 @@ for line in fp:
         scan_chain[0][0:194] = scan_chain[0][1:195]
         scan_chain[0][0] = app_chain1
 
+        # one lost value when run in normal mode
+        update_lfsr(lfsr_equation)
+
         fw.write("\"pattern %d\": Call \"load_unload\" {\n" % count) 
+        # add test_so to compare
+        if count > 0:
+            for i in range(16):
+                if i == 6:
+                    fw.write("\t\t\"data_we_o\"=")
+                elif  i == 7:
+                    fw.write("\t\t\"irq_id_o[4]\"=")
+                else:
+                    fw.write("\t\t\"test_so%d\"=" % (i+1))
+                
+                if i == 0:
+                    fw.write("\\r195 H ; \n")
+                else:
+                    fw.write("\\r194 H ; \n")
         count += 1
         for y in range(16):
             # write patterns for scan chain
@@ -75,7 +91,18 @@ for line in fp:
             for i in range(len(scan_chain[y])):
                 fw.write(str(scan_chain[y][i]))
             fw.write(";\n")  
-        fw.write("}\n")               
+        fw.write("}\n") 
+
+        fw.write("Call \"multiclock_capture\" {\n")
+        # the last 4 bits are in order lbist_en, rst_ni, test_en_i and test_mode_tp
+        fw.write("\t\t\"_pi\"=NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNP1NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN1101")
+        # bit coming from lfsr
+        for i in range(16):
+            fw.write(str(lfsr_equation[i])) 
+        fw.write(";\n" ) 
+        # understand what do with this signals and how to update them
+        fw.write("\t\t\"_po\"=\\r246 H ; }\n")
+         
 
 fp.close()
 fw.close()

@@ -203,10 +203,10 @@ begin
 	clock_generation : process
 	begin
 		loop
-			tester_clock <= '1';
-			wait for clock_t1;
-			tester_clock <= '0'; 
-			wait for clock_t1;
+			tester_clock <= '0';
+			wait for clock_t1/2;
+			tester_clock <= '1'; 
+			wait for clock_t1/2;
 		end loop;
 	end process;
 
@@ -223,7 +223,7 @@ begin
 		dut_reset <= '1'; lfsr_reset <= '0';
 		for i in 1 to 100 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*190;
+			wait for clock_t1*195;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -234,7 +234,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 100 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*190;
+			wait for clock_t1*195;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -245,7 +245,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 100 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*190;
+			wait for clock_t1*195;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -256,7 +256,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*190;
+			wait for clock_t1*195;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -267,7 +267,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*190;
+			wait for clock_t1*195;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
