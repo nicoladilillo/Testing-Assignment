@@ -38,11 +38,11 @@ architecture tb of LBIST_testbench is
             apu_master_valid_i, irq_i, irq_sec_i, debug_req_i, fetch_enable_i,
             test_si1, test_si2, test_si3, test_si4, test_si5, test_si6, test_si7,
             test_si8, test_si9, test_si10, test_si11, test_si12, test_si13,
-            test_si14, test_si15, test_si16, test_mode_tp, lbist_en: IN std_logic;
+            test_si14, test_si15, test_si16, test_mode: IN std_logic;
             instr_req_o, data_req_o, data_we_o, apu_master_req_o,
             apu_master_ready_o, irq_ack_o, sec_lvl_o, core_busy_o, test_so1,
-            test_so2, test_so3, test_so4, test_so5, test_so6, test_so9,
-            test_so10, test_so11, test_so12, test_so13, test_so14,
+            test_so2, test_so3, test_so4, test_so5, test_so6, test_so7, test_so8,
+            test_so9, test_so10, test_so11, test_so12, test_so13, test_so14,
             test_so15, test_so16: OUT std_logic);
     end component;
 
@@ -122,11 +122,10 @@ begin
     dut : riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
     port map (
             clk_i    => lfsr_clock,
-            clock_en_i => '0',
+            clock_en_i => '1',
             rst_ni    => dut_reset,
             test_en_i => test_en_i_s,
-	        test_mode_tp => '1',
-            lbist_en => '1',
+			test_mode => '1',
             test_si1 => lfsr_out(0),
             test_si2 => lfsr_out(1),
             test_si3 => lfsr_out(2),
@@ -149,8 +148,8 @@ begin
             test_so4 => dut_out(3),
             test_so5 => dut_out(4),
             test_so6 => dut_out(5),
-            -- test_so7 => dut_out(6),
-			-- test_so8 => dut_out(7),
+            test_so7 => dut_out(6),
+			test_so8 => dut_out(7),
             test_so9 => dut_out(8),
             test_so10 => dut_out(9),
             test_so11 => dut_out(10),
@@ -203,38 +202,34 @@ begin
 	clock_generation : process
 	begin
 		loop
-			tester_clock <= '0';
-			wait for clock_t1/2;
-			tester_clock <= '1'; 
-			wait for clock_t1/2;
+			tester_clock <= '1';
+			wait for clock_t1;
+			tester_clock <= '0'; 
+			wait for clock_t1;
 		end loop;
 	end process;
 
 	FSM: process
 	begin
-		dut_reset <= '0'; lfsr_reset <= '1';
-		seed <= "1010101010101010101010101";
+		dut_reset <= '0'; lfsr_reset <= '1'; 
+		
+		seed <= "0000000000000000000000001";
 		wait for 3/2*clock_t1;
-		--dut_reset <= '1'; lfsr_reset <= '0';
-		--test_en_i_s <= '1';
-		--wait for 20000 ns;
-
-		--seed <= "0000000000000000000000001";
 		dut_reset <= '1'; lfsr_reset <= '0';
-		for i in 1 to 100 loop
+		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*195;
+			wait for clock_t1*190;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
 
-		seed <= "1000111000111111001111101";
+		seed <= "0000000000111111111111111";
 		lfsr_reset <= '1';
 		wait for clock_t1;
 		lfsr_reset <= '0';
-		for i in 1 to 100 loop
+		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*195;
+			wait for clock_t1*190;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -243,9 +238,9 @@ begin
 		lfsr_reset <= '1';
 		wait for clock_t1;
 		lfsr_reset <= '0';
-		for i in 1 to 100 loop
+		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*195;
+			wait for clock_t1*190;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -256,7 +251,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*195;
+			wait for clock_t1*190;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;
@@ -267,7 +262,7 @@ begin
 		lfsr_reset <= '0';
 		for i in 1 to 200 loop
 			test_en_i_s <= '1';
-			wait for clock_t1*195;
+			wait for clock_t1*190;
 			test_en_i_s <= '0';
 			wait for clock_t1;
 		end loop;

@@ -10,7 +10,7 @@ module lfsr
 
 (
     input wire clk, reset,
-	input wire [N:0] seed,
+	input wire [N-1:0] seed,
     output wire [N:0] q
 );
 
@@ -22,7 +22,7 @@ always @(posedge clk, posedge reset)
 begin 
     if (reset)
         r_reg <= seed;  // use this or uncomment below two line
-    else if (clk == 1'b1)
+    else //if (clk)//if (clk == 1'b1)
         r_reg <= r_next;
 end
 
@@ -47,6 +47,8 @@ case (N)
 17: assign feedback_value = r_reg[17] ~^ r_reg[3] ~^ r_reg[0];
 
 24: assign feedback_value = r_reg[24] ~^ r_reg[7] ~^ r_reg[2] ~^ r_reg[1] ~^ r_reg[0];
+
+32: assign feedback_value = r_reg[32] ~^ r_reg[22] ~^ r_reg[2] ~^ r_reg[1] ~^ r_reg[0];
 
 
 default: 
