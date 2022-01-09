@@ -20,41 +20,41 @@ source ../bin/$TECH.dc_setup_synthesis.tcl
 ## if you want to use clock gating
 #set_clock_gating_style -sequential_cell latch -positive_edge_logic {and} -negative_edge_logic {or} -control_point before -control_signal scan_enable
 
-analyze -format sverilog  -work work ${FPUNEW}/src/fpnew_pkg.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_core_package.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_defines.sv
+#analyze -format sverilog  -work work ${FPUNEW}/src/fpnew_pkg.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_core_package.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_defines.sv
 #analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_tracer_defines.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_macros.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_config.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_basic.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_div.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_apu_disp.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_compressed_decoder.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_controller.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_cs_registers.sv
-analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_macros.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_config.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_basic.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_div.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_apu_disp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_compressed_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_cs_registers.sv
+#analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
 #analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_core.sv
 #analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_debug_unit.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_decoder.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_int_controller.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_ex_stage.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_controller.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_regs.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_id_stage.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_if_stage.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_load_store_unit.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_mult.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_buffer.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_L0_buffer.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_fetch_fifo.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_L0_buffer.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_pmp.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_int_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_ex_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_regs.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_id_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_if_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_load_store_unit.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_mult.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_fetch_fifo.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_pmp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file.sv
 #analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file_latch.sv
-analyze -format sverilog  -work work ${RISCV_PATH}/rtl/register_file_test_wrap.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/register_file_test_wrap.sv
 #analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_tracer.sv
-analyze -format sverilog  -work work cluster_clock_gating_nangate.sv
+#analyze -format sverilog  -work work cluster_clock_gating_nangate.sv
 
 
 #analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
@@ -136,6 +136,6 @@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}.sdf"
 write_sdc "${GATE_PATH}/${TOPLEVEL}.sdc"
 # write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
 write_tmax_library -path "${GATE_PATH}"
-report_area > area.txt
+report_area > area_LBIST_only.txt
 
 #quit

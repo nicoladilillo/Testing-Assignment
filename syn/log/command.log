@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version M-2016.12 for linux64 -- Nov 21, 2016
-#@ # Date:   Mon Jan  3 06:17:24 2022
+#@ # Date:   Sun Jan  9 05:28:36 2022
 #@ # Run by: s290766@localhost.localdomain
 #@ 
 
@@ -5673,8 +5673,8 @@ source -echo -verbose /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/s
 #@ analyze -format verilog  -work work ${RISCV_PATH}/LBIST/lfsr.v
 #@ analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/phase_shifter.vhd
 #@ analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST.vhd
-#@ analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST_complete.vhd
 #@ analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/MISR.vhd
+#@ analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST_complete.vhd
 #@ 
 #@ #PARAMETERS
 #@ #set  N_EXT_PERF_COUNTERS   0
@@ -5739,7 +5739,7 @@ source -echo -verbose /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/s
 #@ 
 #@ #set_operating_conditions $OPER_COND
 #@ 
-#@ compile_ultra -gate_clock -no_autoungroup
+#@ #compile_ultra -gate_clock -no_autoungroup
 #@ compile_ultra -no_autoungroup
 #@ change_names -hierarchy -rules verilog
 #@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}.v"
@@ -5748,11 +5748,9 @@ source -echo -verbose /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/s
 #@ write_sdc "${GATE_PATH}/${TOPLEVEL}.sdc"
 #@ # write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
 #@ write_tmax_library -path "${GATE_PATH}"
-#@ report_area > area.txt
+#@ report_area > area_LBIST_only.txt
 #@ 
 #@ #quit
 #@ # -- End source /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/run/../bin/syn_nangate.tcl
 
-report_area
-link
 quit
