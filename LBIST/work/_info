@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST
+Elbist
+Z1 w1641203584
+Z2 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST.vhd
+Z7 F/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST.vhd
+l0
+L6
+V0RkcFZPiR3fgERdfd@Sgo1
+!s100 AJJT:XlzE[hQcMI>O_:^X0
+Z8 OL;C;10.5c_4;63
+32
+Z9 !s110 1641203613
+!i10b 1
+Z10 !s108 1641203613.000000
+Z11 !s90 -reportprogress|300|-work|work|/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST.vhd|
+Z12 !s107 /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST.vhd|
+!i113 0
+Z13 o-work work
+Z14 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+R4
+R5
+DEx4 work 5 lbist 0 22 0RkcFZPiR3fgERdfd@Sgo1
+l54
+L27
+Vc=M4]jZ?jNGP1h3;Pk@Lz0
+!s100 HNJd79QzT]bk1X2GozP490
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Elbist_complete
+Z15 w1641203658
+R2
+R3
+R5
+R4
+Z16 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+R0
+Z17 8/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST_complete.vhd
+Z18 F/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST_complete.vhd
+l0
+L11
+VMB0YXo1G`44eedWjnhg5O1
+!s100 bkf3NJ@Q6<e@LG:iOeF>B0
+R8
+32
+Z19 !s110 1641203665
+!i10b 1
+Z20 !s108 1641203665.000000
+Z21 !s90 -reportprogress|300|-work|work|/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST_complete.vhd|
+Z22 !s107 /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/LBIST_complete.vhd|
+!i113 0
+R13
+R14
+Abeh
+R2
+R3
+R5
+R4
+R16
+Z23 DEx4 work 14 lbist_complete 0 22 MB0YXo1G`44eedWjnhg5O1
+l152
+L23
+Z24 Va`0ag2T@]2^6;G>PQ6OAO0
+Z25 !s100 zO98lUoPh5FGZN:ARo1OC2
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R13
+R14
+vlfsr
+!s110 1641202735
+!i10b 1
+!s100 :]?fLRB7B[T1Lf8`fLF3<1
+I]N@PoH7Z1=<^?JG@G@]S>2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z26 w1639839127
+8/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/lfsr.v
+F/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/lfsr.v
+L0 6
+OL;L;10.5c_4;63
+r1
+!s85 0
+31
+!s108 1641202735.000000
+!s107 /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/lfsr.v|
+!s90 -reportprogress|300|-work|work|/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/lfsr.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+Emisr
+Z27 w1641202732
+R4
+R5
+R0
+Z28 8/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/MISR.vhd
+Z29 F/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/MISR.vhd
+l0
+L9
+V2[_S94RFX;1VhHi3inW<<1
+!s100 =1i9NdY1b6oRIWNNfBPaQ2
+R8
+32
+Z30 !s110 1641202734
+!i10b 1
+Z31 !s108 1641202734.000000
+Z32 !s90 -reportprogress|300|-work|work|/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/MISR.vhd|
+Z33 !s107 /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/MISR.vhd|
+!i113 0
+R13
+R14
+Abeh
+R4
+R5
+DEx4 work 4 misr 0 22 2[_S94RFX;1VhHi3inW<<1
+l26
+L21
+VPa?zVSN]YAGXCCOFlzz`]3
+!s100 F5=l8XS<Y`a:LRmcLRG6K0
+R8
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 0
+R13
+R14
+Ephase_shifter
+R26
+R3
+R4
+R5
+R0
+Z34 8/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/phase_shifter.vhd
+Z35 F/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/phase_shifter.vhd
+l0
+L6
+Vd64:CS9j=OeCNAbcTm<FG1
+!s100 IODhC@T?VFAC]DY@G==8`1
+R8
+32
+Z36 !s110 1641202737
+!i10b 1
+Z37 !s108 1641202737.000000
+Z38 !s90 -reportprogress|300|-work|work|/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/phase_shifter.vhd|
+Z39 !s107 /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/LBIST/phase_shifter.vhd|
+!i113 0
+R13
+R14
+Aarch
+R3
+R4
+R5
+DEx4 work 13 phase_shifter 0 22 d64:CS9j=OeCNAbcTm<FG1
+l17
+L15
+VnMR09KgKoWI=?a1z0Pk_V3
+!s100 IX?QV_1E_@O4@3mjM_LNK1
+R8
+32
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 0
+R13
+R14

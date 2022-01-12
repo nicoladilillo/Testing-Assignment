@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : LBIST_complete
+Version: M-2016.12
+Date   : Sat Jan  8 07:01:33 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db)
+
+Number of ports:                         9304
+Number of nets:                         43572
+Number of cells:                        33392
+Number of combinational cells:          29926
+Number of sequential cells:              3341
+Number of macros/black boxes:               0
+Number of buf/inv:                       5210
+Number of references:                       5
+
+Combinational area:              33329.534187
+Buf/Inv area:                     3073.630013
+Noncombinational area:           21140.350196
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 54469.884384
+Total area:                 undefined
+1

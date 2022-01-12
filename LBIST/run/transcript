@@ -84,8 +84,6 @@
 # Loading work.XNOR2_X1
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.OAI21_X1
 # Loading work.OAI21_X1
-# Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.AND2_X2
-# Loading work.AND2_X2
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.HA_X1
 # Loading work.HA_X1
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.SDFFS_X1
@@ -112,6 +110,8 @@
 # Loading work.NOR4_X1
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.AOI211_X1
 # Loading work.AOI211_X1
+# Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.AND2_X2
+# Loading work.AND2_X2
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.riscv_L0_buffer_RDATA_IN_WIDTH128_test_1
 # Loading work.riscv_L0_buffer_RDATA_IN_WIDTH128_test_1
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.NAND2_X2
@@ -873,6 +873,123 @@
 # ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(60952): [TFMPC] - Missing connection for port 'is_fetch_failed_o'.
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.seq_SDFFS_X1
 # Loading work.seq_SDFFS_X1
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3748): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/hwlp_dec_cnt_id_o_reg_0_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3748): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3750): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_2_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3750): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3752): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_4_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3752): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3755): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_5_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3755): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3758): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_6_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3758): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3761): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_7_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3761): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3764): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_8_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3764): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3767): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_9_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3767): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3770): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_10_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3770): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3773): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_11_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3773): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3776): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_14_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3776): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3779): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_22_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3779): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3782): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_23_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3782): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3785): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/illegal_c_insn_id_o_reg File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3785): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3787): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/is_compressed_id_o_reg File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3787): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3791): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_1_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3791): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3827): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_24_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3827): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3829): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_25_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3829): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3831): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_26_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3831): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3833): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_28_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3833): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3835): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_29_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3835): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3837): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_30_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3837): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3839): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_31_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3839): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3841): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_0_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3841): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3846): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/is_hwlp_id_q_reg File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3846): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3851): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/hwlp_dec_cnt_id_o_reg_1_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3851): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3853): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_30_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3853): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3856): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/pc_id_o_reg_27_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3856): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3864): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_20_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3864): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3867): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_27_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3867): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3870): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_28_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3870): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3873): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_21_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3873): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3876): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_3_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3876): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3885): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_16_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3885): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3888): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_15_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3888): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3891): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_18_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3891): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3894): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_19_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3894): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3897): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_17_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3897): [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(3900): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ns  Iteration: 0  Instance: /lbist_testbench/dut/if_stage_i/instr_rdata_id_o_reg_31_ File: ../../syn/techlib/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3722) ../../syn/output/riscv_core_scan.v(3900): [TFMPC] - Missing connection for port 'QN'.
 # Refreshing /home/s284963/riscv_testing_2021_zoix/LBIST/run/work.seq_SDFFR_X2
 # Loading work.seq_SDFFR_X2
 # ** Warning: (vsim-3017) ../../syn/output/riscv_core_scan.v(57388): [TFMPC] - Too few port connections. Expected 26, found 25.

@@ -5,6 +5,7 @@ use ieee.std_logic_1164.all;
 -- Golden_D is the expected output
 -- CLK and RST are the 2 signals for the resets of the machine
 
+
 entity MISR is
 	port(
 		CLK : IN std_logic;

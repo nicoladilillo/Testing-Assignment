@@ -1427,7 +1427,7 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@ }
 #@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/auto_path_groups.tcl
 
-#@ # Copyright (c) 2016-2017 Synopsys, Inc. This Synopsys software and all
+#@ # Copyright (c) 2016 Synopsys, Inc. This Synopsys software and all
 #@ # associated documentation are proprietary to Synopsys, Inc. and may
 #@ # only be used pursuant to the terms and conditions of a written
 #@ # license agreement with Synopsys, Inc. All other use, reproduction,
@@ -1484,9 +1484,7 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@     # registers path group suffix
 #@     variable auto_path_groups_reg_suffix to_regs_
 #@     # macro path group suffix
-#@     variable auto_path_groups_to_macro_suffix to_macros_
-#@     # macro path group suffix
-#@     variable auto_path_groups_from_macro_suffix from_macros_
+#@     variable auto_path_groups_macro_suffix to_macros_
 #@     # ICG path group suffix
 #@     variable auto_path_groups_icg_suffix to_ICGs
 #@     # input path group suffix
@@ -1496,7 +1494,7 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@     # feedthrough path group suffix 
 #@     variable auto_path_groups_feedthrough_suffix feedthrough
 #@     # user path groups
-#@     variable auto_path_groups_user_path_groups_file auto_path_groups.user_path_groups.tcl
+#@     variable auto_path_groups_user_path_groups [list]
 #@ }
 #@ 
 #@ proc create_auto_path_groups { args } {
@@ -1508,13 +1506,12 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@     variable ::cae::auto_path_groups_priority
 #@     variable ::cae::auto_path_groups_min_regs_per_hierarchy
 #@     variable ::cae::auto_path_groups_reg_suffix
-#@     variable ::cae::auto_path_groups_to_macro_suffix
-#@     variable ::cae::auto_path_groups_from_macro_suffix
+#@     variable ::cae::auto_path_groups_macro_suffix
 #@     variable ::cae::auto_path_groups_icg_suffix
 #@     variable ::cae::auto_path_groups_input_suffix
 #@     variable ::cae::auto_path_groups_output_suffix
 #@     variable ::cae::auto_path_groups_feedthrough_suffix
-#@     variable ::cae::auto_path_groups_user_path_groups_file
+#@     variable ::cae::auto_path_groups_user_path_groups
 #@     
 #@     set options(-slack) ${auto_path_groups_slack}
 #@     set options(-max) ${auto_path_groups_max}
@@ -1523,34 +1520,27 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@     set options(-priority) ${auto_path_groups_priority}
 #@     set options(-min_regs_per_hierarchy) ${auto_path_groups_min_regs_per_hierarchy}
 #@     set options(-exclude) [list]
-#@     set options(-user_path_groups_file) ${auto_path_groups_user_path_groups_file}
 #@     
 #@     parse_proc_arguments -args ${args} options
 #@     
 #@     if { [info exists options(-file)] } {
-#@         if { [catch {open $options(-file) w} fileId] } {
+#@         if {[catch {open $options(-file) w } fileId] } {
 #@             return -code error [::cae::utils::msg e ${fileId}]
 #@         }
 #@     }
 #@     
 #@     # save user path groups
-#@     if { ![info exists options(-skip)] } {
-#@         echo [::cae::utils::msg i "Saving user path groups to $options(-user_path_groups_file)..."]
-#@         if { [file exist $options(-user_path_groups_file)] } {
-#@             echo [::cae::utils::msg w "File $options(-user_path_groups_file) already exists and will be overwritten..."]
+#@     if { [llength ${auto_path_groups_user_path_groups}] == 0 } {
+#@         echo [::cae::utils::msg i "Saving user path groups..."] 
+#@         redirect -variable script { write_script -nosplit }
+#@         foreach line [split ${script} \n] {
+#@             if { [string compare -length 10 "group_path" ${line}] == 0 } {
+#@                 lappend auto_path_groups_user_path_groups ${line}
+#@             }
 #@         }
-#@         if { [catch {open "| grep \"^group_path\" > $options(-user_path_groups_file)" w} channelId] } {
-#@             return -code error [::cae::utils::msg e ${channelId}]
-#@         }
-#@         redirect -channel ${channelId} { write_script -nosplit }
-#@         set r [catch {close ${channelId}} msg]
-#@         switch ${r} {
-#@             0 { echo [::cae::utils::msg i "User path groups saved"] }
-#@             1 { echo [::cae::utils::msg i "No user path groups to save"] }
-#@             default { return -code error [::cae::utils::msg e ${msg}] }
-#@         }
+#@         echo [::cae::utils::msg i "[llength ${auto_path_groups_user_path_groups}] path group(s) saved"]         
 #@     }
-#@ 
+#@     
 #@     set total 0
 #@     
 #@     suppress_message ${auto_path_groups_messages}
@@ -1686,14 +1676,7 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@             set path_group_names [get_object_name ${macro_cells}]
 #@             set counter 0
 #@             foreach path_group_name ${path_group_names} {
-#@                 set command "group_path -name $options(-prefix)${auto_path_groups_to_macro_suffix}${counter} -to \[get_cells ${path_group_name}\] -priority $options(-priority)"
-#@                 echo [::cae::utils::msg i ${command}]
-#@                 if { [info exists options(-file)] } {
-#@                     puts ${fileId} ${command}
-#@                 }
-#@                 eval ${command}
-#@                 incr counter
-#@                 set command "group_path -name $options(-prefix)${auto_path_groups_from_macro_suffix}${counter} -from \[get_cells ${path_group_name}\] -priority $options(-priority)"
+#@                 set command "group_path -name $options(-prefix)${auto_path_groups_macro_suffix}${counter} -to \[get_cells ${path_group_name}\] -priority $options(-priority)"
 #@                 echo [::cae::utils::msg i ${command}]
 #@                 if { [info exists options(-file)] } {
 #@                     puts ${fileId} ${command}
@@ -1777,20 +1760,16 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@         { -prefix "path group name prefix (default: synopsys_pg_)" prefix string optional }
 #@         { -file "file name to dump group_path commands" file_name string optional }
 #@         { -verbose "verbose mode" "" boolean optional }
-#@         { -user_path_groups_file "save user path groups to this file" file_name string optional }
-#@         { -skip "do not save user path groups" "" boolean optional }
 #@     }
 #@ 
 #@ proc remove_auto_path_groups { args } {
 #@     variable ::cae::auto_path_groups_messages
 #@     variable ::cae::auto_path_groups_prefix
 #@     variable ::cae::auto_path_groups_verbose
-#@     variable ::cae::auto_path_groups_user_path_groups_file
+#@     variable ::cae::auto_path_groups_user_path_groups
 #@     
 #@     set options(-prefix) ${auto_path_groups_prefix}
 #@     set options(-verbose) ${auto_path_groups_verbose}
-#@     set options(-user_path_groups_file) ${auto_path_groups_user_path_groups_file}
-#@     
 #@     parse_proc_arguments -args ${args} options
 #@     
 #@     if { [info exists options(-file)] } {
@@ -1817,18 +1796,14 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@     }
 #@     
 #@     # restore user path groups
-#@     if { ![info exists options(-skip)] } {
-#@         echo [::cae::utils::msg i "Restoring user path groups from $options(-user_path_groups_file)..."]
-#@         if { [file exist $options(-user_path_groups_file)] } {
-#@             if { [file size $options(-user_path_groups_file)] != 0} {
-#@                 source -continue_on_error $options(-user_path_groups_file)
-#@             } else {
-#@                 echo [::cae::utils::msg i "No user path groups to restore"]
-#@             }
-#@             file delete -force $options(-user_path_groups_file)
-#@         } else {
-#@             echo [::cae::utils::msg w "File $options(-user_path_groups_file) doesn't exist"]         
+#@     if { [llength ${auto_path_groups_user_path_groups}] != 0 } {
+#@         echo [::cae::utils::msg i "Restoring user path groups..."] 
+#@         foreach command ${auto_path_groups_user_path_groups} {
+#@             echo [::cae::utils::msg i ${command}]
+#@             eval ${command}
 #@         }
+#@         echo [::cae::utils::msg i "[llength ${auto_path_groups_user_path_groups}] path group(s) restored"]         
+#@         set auto_path_groups_user_path_groups [list]
 #@     }
 #@     
 #@     return
@@ -1838,8 +1813,6 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@         { -prefix "path group name prefix (default: synopsys_pg)" prefix string optional }
 #@         { -file "file name to dump group_path commands" file_name string optional }
 #@         { -verbose "verbose mode" "" boolean optional }
-#@         { -user_path_groups_file "restore user path groups from this file" file_name string optional }
-#@         { -skip "do not restore user path groups" "" boolean optional }
 #@     }
 #@ 
 #@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/auto_path_groups.tcl
@@ -1881,6 +1854,7 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@   if {$synopsys_program_name != "dc_sms_shell"} {
 #@     source $synopsys_root/auxx/syn/.dc_procs.tcl
 #@   }
+#@   alias list_commands help
 #@ }
 #@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/.dc_common_procs.tcl
 
@@ -3978,10 +3952,6 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@ set hdlin_field_naming_style		"" 
 #@ set hdlin_upcase_names            	"FALSE"
 #@ set hdlin_sv_union_member_naming        "FALSE"
-#@ set hdlin_enable_hier_map               "FALSE"
-#@ set hdlin_sv_interface_only_modules     ""
-#@ set hdlin_intermediate_file_method      "legacy"
-#@ set hdlin_sv_enable_rtl_attributes      "FALSE"
 #@ set hdlin_vhdl_std		        2008
 #@ set hdlin_vhdl93_concat				"TRUE"
 #@ set hdlin_vhdl_syntax_extensions	"FALSE"
@@ -4014,18 +3984,16 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@ set hdlin_enable_rtldrc_info "false"
 #@ set hdlin_enable_ieee_1735_support "false"
 #@ set hdlin_interface_port_ABI 3
-#@ set hdlin_interface_port_downto "FALSE"
 #@ set hdlin_shorten_long_module_name "false"
 #@ set hdlin_module_name_limit 256
 #@ set hdlin_enable_assertions "FALSE"
 #@ set hdlin_enable_configurations "FALSE"
 #@ set hdlin_sv_blackbox_modules ""
 #@ set hdlin_sv_tokens "FALSE"
-#@ set hdlin_sv_packages "dont_chain"
+#@ set hdlin_sv_packages "enable"
 #@ set hdlin_verification_priority "FALSE"
 #@ set hdlin_enable_elaborate_ref_linking "FALSE"
 #@ set hdlin_enable_hier_naming "FALSE"
-#@ set hdlin_enable_elaborate_update "true"
 #@ set hdlin_vhdl_mixed_language_instantiation "FALSE"
 #@ set hdlin_netlist_unloaded_signals "FALSE"
 #@ set hdl_preferred_license   ""
@@ -4778,10 +4746,6 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@   group_variable hdl "verilogout_no_negative_index"
 #@   group_variable hdl "hdlin_enable_rtldrc_info"
 #@   group_variable hdl "hdlin_sv_blackbox_modules"
-#@   group_variable hdl "hdlin_sv_enable_rtl_attributes"
-#@   group_variable hdl "hdlin_enable_hier_map"
-#@   group_variable hdl "hdlin_sv_interface_only_modules"
-#@   group_variable hdl "hdlin_intermediate_file_method"
 #@   group_variable hdl "hdlin_infer_function_local_latches"
 #@   group_variable hdl "hdlin_infer_local_sync_enable_only"
 #@   group_variable hdl "hdlin_module_arch_name_splitting"
@@ -4815,7 +4779,6 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@   group_variable hdl "hdlin_sv_tokens"
 #@   group_variable hdl "hdlin_enable_elaborate_ref_linking"
 #@   group_variable hdl "hdlin_enable_hier_naming"
-#@   group_variable hdl "hdlin_enable_elaborate_update"
 #@   group_variable hdl "hdlin_autoread_verilog_extensions"
 #@   group_variable hdl "hdlin_autoread_sverilog_extensions"
 #@   group_variable hdl "hdlin_autoread_vhdl_extensions"
@@ -5419,12 +5382,53 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@ 
 #@ }
 #@ 
+#@ proc get_nglc_search_path { } {
+#@   set exec_path "invalid"
+#@   if {[info exists ::env(SYNOPSYS_LC_ROOT)] && [file exists $::env(SYNOPSYS_LC_ROOT)/$::sh_arch/lc/bin/lc_shell_exec]} {
+#@     set exec_path $::env(SYNOPSYS_LC_ROOT)/$::sh_arch/lc/bin/lc_shell_exec
+#@   } else {
+#@      set path "$::synopsys_root/$::sh_arch/syn/bin/lc_shell_exec"
+#@      if {  [file exists $::synopsys_root/$::sh_arch/syn/bin/lc_shell_exec] } {
+#@       while { [catch {file readlink $path}] == 0 } {
+#@         if { [file pathtype [file readlink $path] ] == "relative" } {
+#@           # set path [file join [file dirname $path] [file readlink $path] ]
+#@           # when lc_shell_is a relative path, return the path directly,
+#@           # this is mostly for the case in build client.
+#@           break
+#@        } else {
+#@           set path [file readlink $path]
+#@        }
+#@         if { [file exists $path] } {
+#@           continue
+#@         } else {
+#@           break
+#@         }
+#@       }
+#@       if { [file exists $path] } {
+#@         set exec_path $path
+#@       }
+#@     }
+#@   }
+#@   return $exec_path
+#@ }
+#@ 
+#@ proc get_libra_synopsys_root { } {
+#@   return [file dirname [file dirname [file dirname [file dirname $::nglc_search_path] ] ] ] 
+#@ }
+#@ 
 #@ proc valias {v_orig v_alias} {
 #@    uplevel 1 "upvar 0 $v_orig $v_alias"
 #@ }
 #@ 
+#@ set nglc_result_path "/tmp"
+#@ set nglc_replay_tcl_file "nglc_shell_command.tcl"
+#@ set nglc_search_path [get_nglc_search_path]
 #@ set lc_run_from_legacy_library_compiler "true"
-#@ 
+#@ set nglc_is_none_tech_file "false"
+#@ set nglc_is_symbol_file "false"
+#@ set nglc_keep_nglc_temp_files "false"
+#@ set nglc_intermediate_db_files ""
+#@ set nglc_log_path ""
 #@ set lc_enable_legacy_library_compiler "false"
 #@ 
 #@ valias lc_enable_legacy_library_compiler lc_enable_common_shell_lc
@@ -5442,7 +5446,13 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 #@       set LC_ROOT [file dirname [file dirname [file dirname [file dirname $lc_link]]]]
 #@       append man_path " $LC_ROOT/doc/lc/man"
 #@     }
-#@ } 
+#@     if { [set $var] != "" } {
+#@       puts $fileName "catch \{ set $var \[list \[binary format H* [make_hex [set $var]]\]\] \}"
+#@     }  else {
+#@       puts $fileName "catch \{ set $var \"\" \}"
+#@     }
+#@  }
+#@ }
 #@ 
 #@ source ${synopsys_root}/auxx/syn/lc_commands.tbc
 #@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lc_commands.tbc
@@ -6686,8 +6696,8 @@ source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.se
 
 #@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
-#@ # -- Starting source /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
+source -echo -verbose /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
+#@ # -- Starting source /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
 
 #@ set GATE_PATH			../output
 #@ set LOG_PATH			../log
@@ -6712,12 +6722,8 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ 
 #@ 
 #@ read_ddc $TOPLEVEL.ddc
-#@ 
 #@ #link
 #@ #check_design
-#@ 
-#@ create_logic_port -direction in test_mode_tp
-#@ create_logic_port -direction in lbist_en
 #@ compile_ultra -incremental -gate_clock -scan -no_autoungroup
 #@ 
 #@ 
@@ -6725,7 +6731,8 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ 
 #@ 
 #@ report_area
-#@ set_dft_configuration -scan_compression disable
+#@ set_dft_configuration -scan_compression enable
+#@ set_dft_configuration -testability enable
 #@ 
 #@ set test_default_scan_style multiplexed_flip_flop
 #@ 
@@ -6755,8 +6762,10 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ set_scan_element false NangateOpenCellLibrary/DLH_X1
 #@ 
 #@ 
-#@ set_scan_configuration -chain_count 16
-#@ #set_scan_compression_configuration -chain_count 20
+#@ set_scan_configuration -chain_count 32
+#@ set_scan_compression_configuration -chain_count 40
+#@ set_testability_configuration -target core_wrapper -clock_signal clk_i -exclude_elements rst_ni, test_en_i
+#@ 
 #@ 
 #@ create_test_protocol -infer_asynch -infer_clock
 #@ dft_drc
@@ -6772,10 +6781,10 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ 
 #@ report_area
 #@ 
-#@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan.v"
-#@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan.sdf"
-#@ write_sdc "${GATE_PATH}/${TOPLEVEL}_scan.sdc"
-#@ write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scan.spf" -test_mode Internal_scan
-#@ # write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scancompress.spf" -test_mode ScanCompression_mode
+#@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan32.v"
+#@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan32.sdf"
+#@ write_sdc "${GATE_PATH}/${TOPLEVEL}_scan32.sdc"
+#@ write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scan32.spf" -test_mode Internal_scan
+#@ write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}_scancompress32.spf" -test_mode ScanCompression_mode
 #@ 
 #@ quit

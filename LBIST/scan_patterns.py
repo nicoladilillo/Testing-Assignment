@@ -1,4 +1,4 @@
-def AND(a,b): return a*b
+ef AND(a,b): return a*b
 def OR(a,b):  return 1-(1-a)*(1-b)
 def NOT(a):   return 1-a
 
