@@ -10,7 +10,7 @@ module lfsr
 
 (
     input wire clk, reset,
-	input wire [N-1:0] seed,
+	input wire [N:0] seed,
     output wire [N:0] q
 );
 

@@ -1,4 +1,0 @@
-vcd dumpports /LBIST_testbench/dut/* -file riscv_core_dumpports.vcd
-#run 400000 ns
-run 80000 ns
-quit

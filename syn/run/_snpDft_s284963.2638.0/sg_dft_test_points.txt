@@ -1,0 +1,201 @@
+#+--------------SPYGLASS DFT UNIFIED TEST POINTS REPORT---------------+#
+# date : 2022-01-12
+# TestMAX Advisor : R-2020.12
+# TestMAX DFT     : R-2020.09-SP2
+
+# test points for target "untestable_logic"
+# start time : 18:02:31
+# runtime : 0.4340
+# end time : 18:02:31
+
+# test points for target "random_resistant"
+# start time : 18:02:35
+# Design : "riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800"
+# Initial Random Pattern Test Coverage : 69.92623
+# Stuck At Test Coverage : 99.99922
+# Stuck At Test Coverage : 99.99922 (considering untestable_logic test points)
+# Random Pattern Count : 8000
+# Effort Level : medium
+# Requested Test Points : 152
+# Threads requested : 8
+# Threads created   : 7 (excluding main thread)
+1  control-1  ex_stage_i/n103 -root_clock clk_i -clock ex_stage_i/n198 #Gain : 1.29482 Cov : 71.22105 S@TC : 100.0
+2  control-1  cs_registers_i/n813 -root_clock clk_i -clock cs_registers_i/n4128 #Gain : 0.86166 Cov : 72.08271 S@TC : 100.0
+3  control-1  id_stage_i/decoder_i/n195 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.82808 Cov : 72.91079 S@TC : 100.0
+4  control-1  ex_stage_i/alu_i/n218 -root_clock clk_i -clock clk #Gain : 0.64698 Cov : 73.55776 S@TC : 100.0
+5  observe    RISCY_PMP_pmp_unit_i/n6050 -root_clock clk_i -clock clk #Gain : 0.64431 Cov : 74.20207 S@TC : 100.0
+6  control-0  id_stage_i/decoder_i/n250 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.62531 Cov : 74.82738 S@TC : 100.0
+7  control-1  if_stage_i/prefetch_128_prefetch_buffer_i/L0_buffer_i/n103 -root_clock clk_i -clock clk #Gain : 0.50475 Cov : 75.33213 S@TC : 100.0
+8  control-1  load_store_unit_i/n576 -root_clock clk_i -clock clk #Gain : 0.42065 Cov : 75.75278 S@TC : 100.0
+9  control-1  ex_stage_i/alu_i/div_valid -root_clock clk_i -clock clk #Gain : 0.39734 Cov : 76.15012 S@TC : 100.0
+10  control-0  id_stage_i/decoder_i/n575 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.34256 Cov : 76.49268 S@TC : 100.0
+11  control-1  id_stage_i/controller_i/n204 -root_clock clk_i -clock clk #Gain : 0.28982 Cov : 76.78251 S@TC : 100.0
+12  control-0  if_stage_i/hwloop_controller_i/n201 -root_clock clk_i -clock if_stage_i/n778 #Gain : 0.27152 Cov : 77.05402 S@TC : 100.0
+13  observe    RISCY_PMP_pmp_unit_i/n3098 -root_clock clk_i -clock clk #Gain : 0.22847 Cov : 77.28249 S@TC : 100.0
+14  observe    RISCY_PMP_pmp_unit_i/n4056 -root_clock clk_i -clock clk #Gain : 0.22205 Cov : 77.50454 S@TC : 100.0
+15  observe    RISCY_PMP_pmp_unit_i/n4576 -root_clock clk_i -clock clk #Gain : 0.21826 Cov : 77.72279 S@TC : 100.0
+16  observe    RISCY_PMP_pmp_unit_i/n247 -root_clock clk_i -clock clk #Gain : 0.21149 Cov : 77.93428 S@TC : 100.0
+17  observe    RISCY_PMP_pmp_unit_i/n4361 -root_clock clk_i -clock clk #Gain : 0.20895 Cov : 78.14323 S@TC : 100.0
+18  control-0  cs_registers_i/n1224 -root_clock clk_i -clock cs_registers_i/n4128 #Gain : 0.18427 Cov : 78.32750 S@TC : 100.0
+19  control-0  id_stage_i/decoder_i/n572 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.18386 Cov : 78.51136 S@TC : 100.0
+20  control-1  RISCY_PMP_pmp_unit_i/n5728 -root_clock clk_i -clock clk #Gain : 0.17265 Cov : 78.68401 S@TC : 100.0
+21  observe    RISCY_PMP_pmp_unit_i/n12139 -root_clock clk_i -clock clk #Gain : 0.20980 Cov : 78.89381 S@TC : 100.0
+22  control-1  RISCY_PMP_pmp_unit_i/n5730 -root_clock clk_i -clock clk #Gain : 0.17314 Cov : 79.06696 S@TC : 100.0
+23  control-1  csr_addr[7] -root_clock clk_i -clock clk_i #Gain : 0.13788 Cov : 79.20483 S@TC : 100.0
+24  control-1  csr_addr[8] -root_clock clk_i -clock clk_i #Gain : 0.14753 Cov : 79.35236 S@TC : 100.0
+25  observe    RISCY_PMP_pmp_unit_i/n491 -root_clock clk_i -clock clk #Gain : 0.12986 Cov : 79.48222 S@TC : 100.0
+26  control-0  ex_stage_i/alu_i/n2662 -root_clock clk_i -clock clk #Gain : 0.12852 Cov : 79.61075 S@TC : 100.0
+27  observe    RISCY_PMP_pmp_unit_i/n305 -root_clock clk_i -clock clk #Gain : 0.12778 Cov : 79.73853 S@TC : 100.0
+28  observe    RISCY_PMP_pmp_unit_i/n12245 -root_clock clk_i -clock clk #Gain : 0.12771 Cov : 79.86625 S@TC : 100.0
+29  observe    RISCY_PMP_pmp_unit_i/n935 -root_clock clk_i -clock clk #Gain : 0.12496 Cov : 79.99121 S@TC : 100.0
+30  observe    RISCY_PMP_pmp_unit_i/n5307 -root_clock clk_i -clock clk #Gain : 0.12483 Cov : 80.11604 S@TC : 100.0
+31  observe    RISCY_PMP_pmp_unit_i/n265 -root_clock clk_i -clock clk #Gain : 0.12271 Cov : 80.23875 S@TC : 100.0
+32  observe    RISCY_PMP_pmp_unit_i/n1464 -root_clock clk_i -clock clk #Gain : 0.12229 Cov : 80.36104 S@TC : 100.0
+33  observe    RISCY_PMP_pmp_unit_i/n252 -root_clock clk_i -clock clk #Gain : 0.12021 Cov : 80.48125 S@TC : 100.0
+34  observe    RISCY_PMP_pmp_unit_i/n84 -root_clock clk_i -clock clk #Gain : 0.11977 Cov : 80.60101 S@TC : 100.0
+35  observe    RISCY_PMP_pmp_unit_i/n248 -root_clock clk_i -clock clk #Gain : 0.11677 Cov : 80.71779 S@TC : 100.0
+36  observe    RISCY_PMP_pmp_unit_i/n51 -root_clock clk_i -clock clk #Gain : 0.11345 Cov : 80.83124 S@TC : 100.0
+37  observe    RISCY_PMP_pmp_unit_i/n2348 -root_clock clk_i -clock clk #Gain : 0.11052 Cov : 80.94176 S@TC : 100.0
+38  observe    RISCY_PMP_pmp_unit_i/n2926 -root_clock clk_i -clock clk #Gain : 0.10664 Cov : 81.04839 S@TC : 100.0
+39  observe    RISCY_PMP_pmp_unit_i/n2673 -root_clock clk_i -clock clk #Gain : 0.10601 Cov : 81.15440 S@TC : 100.0
+40  control-0  id_stage_i/controller_i/n359 -root_clock clk_i -clock clk #Gain : 0.09944 Cov : 81.25385 S@TC : 100.0
+41  control-0  id_stage_i/decoder_i/n225 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.11940 Cov : 81.37325 S@TC : 100.0
+42  control-0  id_stage_i/regc_mux[0] -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.11840 Cov : 81.49165 S@TC : 100.0
+43  observe    RISCY_PMP_pmp_unit_i/n989 -root_clock clk_i -clock clk #Gain : 0.09688 Cov : 81.58852 S@TC : 100.0
+44  observe    RISCY_PMP_pmp_unit_i/n446 -root_clock clk_i -clock clk #Gain : 0.09466 Cov : 81.68318 S@TC : 100.0
+45  observe    RISCY_PMP_pmp_unit_i/n1506 -root_clock clk_i -clock clk #Gain : 0.09171 Cov : 81.77489 S@TC : 100.0
+46  control-0  RISCY_PMP_pmp_unit_i/n3407 -root_clock clk_i -clock clk #Gain : 0.08337 Cov : 81.85827 S@TC : 100.0
+47  observe    RISCY_PMP_pmp_unit_i/n3714 -root_clock clk_i -clock clk #Gain : 0.08417 Cov : 81.94244 S@TC : 100.0
+48  observe    RISCY_PMP_pmp_unit_i/n2099 -root_clock clk_i -clock clk #Gain : 0.08302 Cov : 82.02546 S@TC : 100.0
+49  observe    RISCY_PMP_pmp_unit_i/n1853 -root_clock clk_i -clock clk #Gain : 0.08219 Cov : 82.10764 S@TC : 100.0
+50  observe    RISCY_PMP_pmp_unit_i/n4117 -root_clock clk_i -clock clk #Gain : 0.08193 Cov : 82.18958 S@TC : 100.0
+51  observe    RISCY_PMP_pmp_unit_i/n12237 -root_clock clk_i -clock clk #Gain : 0.08152 Cov : 82.27110 S@TC : 100.0
+52  observe    RISCY_PMP_pmp_unit_i/n12238 -root_clock clk_i -clock clk #Gain : 0.08148 Cov : 82.35258 S@TC : 100.0
+53  observe    RISCY_PMP_pmp_unit_i/n4415 -root_clock clk_i -clock clk #Gain : 0.08110 Cov : 82.43367 S@TC : 100.0
+54  observe    RISCY_PMP_pmp_unit_i/n3161 -root_clock clk_i -clock clk #Gain : 0.08094 Cov : 82.51461 S@TC : 100.0
+55  observe    RISCY_PMP_pmp_unit_i/n1363 -root_clock clk_i -clock clk #Gain : 0.08059 Cov : 82.59520 S@TC : 100.0
+56  observe    RISCY_PMP_pmp_unit_i/n1894 -root_clock clk_i -clock clk #Gain : 0.07705 Cov : 82.67225 S@TC : 100.0
+57  control-1  ex_stage_i/alu_i/n3387 -root_clock clk_i -clock clk #Gain : 0.07610 Cov : 82.74834 S@TC : 100.0
+58  observe    RISCY_PMP_pmp_unit_i/n2276 -root_clock clk_i -clock clk #Gain : 0.07554 Cov : 82.82388 S@TC : 100.0
+59  control-0  id_stage_i/decoder_i/n411 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.07548 Cov : 82.89936 S@TC : 100.0
+60  control-1  csr_addr[9] -root_clock clk_i -clock clk_i #Gain : 0.07383 Cov : 82.97319 S@TC : 100.0
+61  observe    RISCY_PMP_pmp_unit_i/n72 -root_clock clk_i -clock clk #Gain : 0.06506 Cov : 83.03825 S@TC : 100.0
+62  observe    RISCY_PMP_pmp_unit_i/n1965 -root_clock clk_i -clock clk #Gain : 0.06445 Cov : 83.10270 S@TC : 100.0
+63  control-1  ex_stage_i/alu_i/n219 -root_clock clk_i -clock clk #Gain : 0.06258 Cov : 83.16528 S@TC : 100.0
+64  observe    RISCY_PMP_pmp_unit_i/n12189 -root_clock clk_i -clock clk #Gain : 0.05249 Cov : 83.21777 S@TC : 100.0
+65  control-1  ex_stage_i/alu_i/n2740 -root_clock clk_i -clock clk #Gain : 0.05117 Cov : 83.26894 S@TC : 100.0
+66  control-1  if_stage_i/n10 -root_clock clk_i -clock if_stage_i/n778 #Gain : 0.05196 Cov : 83.32089 S@TC : 100.0
+67  observe    RISCY_PMP_pmp_unit_i/n12176 -root_clock clk_i -clock clk #Gain : 0.05129 Cov : 83.37218 S@TC : 100.0
+68  observe    RISCY_PMP_pmp_unit_i/n3828 -root_clock clk_i -clock clk #Gain : 0.05354 Cov : 83.42572 S@TC : 100.0
+69  control-1  if_stage_i/prefetch_128_prefetch_buffer_i/L0_buffer_i/n314 -root_clock clk_i -clock clk #Gain : 0.05571 Cov : 83.48143 S@TC : 100.0
+70  observe    RISCY_PMP_pmp_unit_i/n242 -root_clock clk_i -clock clk #Gain : 0.06393 Cov : 83.54536 S@TC : 100.0
+71  observe    RISCY_PMP_pmp_unit_i/n1306 -root_clock clk_i -clock clk #Gain : 0.04748 Cov : 83.59285 S@TC : 100.0
+72  control-1  id_stage_i/controller_i/n378 -root_clock clk_i -clock clk #Gain : 0.04750 Cov : 83.64035 S@TC : 100.0
+73  control-1  cs_registers_i/n1371 -root_clock clk_i -clock cs_registers_i/n4128 #Gain : 0.07352 Cov : 83.71387 S@TC : 100.0
+74  observe    RISCY_PMP_pmp_unit_i/n1098 -root_clock clk_i -clock clk #Gain : 0.04732 Cov : 83.76118 S@TC : 100.0
+75  observe    RISCY_PMP_pmp_unit_i/n564 -root_clock clk_i -clock clk #Gain : 0.04680 Cov : 83.80798 S@TC : 100.0
+76  observe    RISCY_PMP_pmp_unit_i/n5888 -root_clock clk_i -clock clk #Gain : 0.04623 Cov : 83.85422 S@TC : 100.0
+77  control-1  id_stage_i/decoder_i/n516 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.07341 Cov : 83.92764 S@TC : 100.0
+78  observe    RISCY_PMP_pmp_unit_i/n3862 -root_clock clk_i -clock clk #Gain : 0.04381 Cov : 83.97145 S@TC : 100.0
+79  control-0  id_stage_i/decoder_i/n583 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.04222 Cov : 84.01367 S@TC : 100.0
+80  observe    RISCY_PMP_pmp_unit_i/n46 -root_clock clk_i -clock clk #Gain : 0.04031 Cov : 84.05399 S@TC : 100.0
+81  control-1  RISCY_PMP_pmp_unit_i/n11458 -root_clock clk_i -clock clk #Gain : 0.03920 Cov : 84.09318 S@TC : 100.0
+82  observe    RISCY_PMP_pmp_unit_i/n5467 -root_clock clk_i -clock clk #Gain : 0.03933 Cov : 84.13251 S@TC : 100.0
+83  control-0  id_stage_i/deassert_we -root_clock clk_i -clock clk #Gain : 0.03914 Cov : 84.17165 S@TC : 100.0
+84  observe    RISCY_PMP_pmp_unit_i/n4798 -root_clock clk_i -clock clk #Gain : 0.03660 Cov : 84.20825 S@TC : 100.0
+85  observe    RISCY_PMP_pmp_unit_i/n2098 -root_clock clk_i -clock clk #Gain : 0.03627 Cov : 84.24452 S@TC : 100.0
+86  observe    RISCY_PMP_pmp_unit_i/n1143 -root_clock clk_i -clock clk #Gain : 0.03580 Cov : 84.28032 S@TC : 100.0
+87  observe    RISCY_PMP_pmp_unit_i/n338 -root_clock clk_i -clock clk #Gain : 0.03506 Cov : 84.31538 S@TC : 100.0
+88  observe    RISCY_PMP_pmp_unit_i/n1852 -root_clock clk_i -clock clk #Gain : 0.03505 Cov : 84.35043 S@TC : 100.0
+89  observe    RISCY_PMP_pmp_unit_i/n608 -root_clock clk_i -clock clk #Gain : 0.03472 Cov : 84.38515 S@TC : 100.0
+90  observe    RISCY_PMP_pmp_unit_i/n842 -root_clock clk_i -clock clk #Gain : 0.03438 Cov : 84.41953 S@TC : 100.0
+91  control-1  id_stage_i/decoder_i/n93 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.03408 Cov : 84.45361 S@TC : 100.0
+92  control-1  ex_stage_i/alu_i/int_div_div_i/n200 -root_clock clk_i -clock ex_stage_i/alu_i/int_div_div_i/n1154 #Gain : 0.03408 Cov : 84.48769 S@TC : 100.0
+93  observe    RISCY_PMP_pmp_unit_i/n1362 -root_clock clk_i -clock clk #Gain : 0.03402 Cov : 84.52171 S@TC : 100.0
+94  observe    RISCY_PMP_pmp_unit_i/n5141 -root_clock clk_i -clock clk #Gain : 0.03373 Cov : 84.55544 S@TC : 100.0
+95  observe    RISCY_PMP_pmp_unit_i/n3162 -root_clock clk_i -clock clk #Gain : 0.03359 Cov : 84.58904 S@TC : 100.0
+96  observe    RISCY_PMP_pmp_unit_i/n4118 -root_clock clk_i -clock clk #Gain : 0.03350 Cov : 84.62254 S@TC : 100.0
+97  control-0  RISCY_PMP_pmp_unit_i/n11082 -root_clock clk_i -clock clk #Gain : 0.03240 Cov : 84.65493 S@TC : 100.0
+98  control-0  RISCY_PMP_pmp_unit_i/n11696 -root_clock clk_i -clock clk #Gain : 0.03208 Cov : 84.68701 S@TC : 100.0
+99  control-1  cs_registers_i/n923 -root_clock __no_clock_found__ -clock __no_clock_found__ #Gain : 0.03154 Cov : 84.71855 S@TC : 100.0
+100  observe    RISCY_PMP_pmp_unit_i/n610 -root_clock clk_i -clock clk #Gain : 0.03088 Cov : 84.74944 S@TC : 100.0
+101  observe    RISCY_PMP_pmp_unit_i/n7 -root_clock clk_i -clock clk #Gain : 0.03069 Cov : 84.78013 S@TC : 100.0
+102  observe    RISCY_PMP_pmp_unit_i/n13 -root_clock clk_i -clock clk #Gain : 0.03066 Cov : 84.81078 S@TC : 100.0
+103  observe    RISCY_PMP_pmp_unit_i/n3568 -root_clock clk_i -clock clk #Gain : 0.03060 Cov : 84.84138 S@TC : 100.0
+104  control-0  id_stage_i/hwloop_regs_i/n117 -root_clock clk_i -clock id_stage_i/hwloop_regs_i/n970 #Gain : 0.03040 Cov : 84.87177 S@TC : 100.0
+105  control-1  RISCY_PMP_pmp_unit_i/n3406 -root_clock clk_i -clock clk #Gain : 0.03024 Cov : 84.90201 S@TC : 100.0
+106  observe    RISCY_PMP_pmp_unit_i/n3712 -root_clock clk_i -clock clk #Gain : 0.02997 Cov : 84.93198 S@TC : 100.0
+107  control-1  RISCY_PMP_pmp_unit_i/n6624 -root_clock clk_i -clock clk #Gain : 0.02967 Cov : 84.96165 S@TC : 100.0
+108  observe    RISCY_PMP_pmp_unit_i/n1401 -root_clock clk_i -clock clk #Gain : 0.02939 Cov : 84.99104 S@TC : 100.0
+109  observe    RISCY_PMP_pmp_unit_i/n2384 -root_clock clk_i -clock clk #Gain : 0.02930 Cov : 85.02034 S@TC : 100.0
+110  control-1  id_stage_i/mret_dec -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.02910 Cov : 85.04945 S@TC : 100.0
+111  control-0  id_stage_i/hwloop_regs_i/n457 -root_clock clk_i -clock id_stage_i/hwloop_regs_i/n970 #Gain : 0.02846 Cov : 85.07790 S@TC : 100.0
+112  observe    RISCY_PMP_pmp_unit_i/n3371 -root_clock clk_i -clock clk #Gain : 0.02778 Cov : 85.10568 S@TC : 100.0
+113  observe    RISCY_PMP_pmp_unit_i/n58 -root_clock clk_i -clock clk #Gain : 0.02762 Cov : 85.13331 S@TC : 100.0
+114  observe    RISCY_PMP_pmp_unit_i/n535 -root_clock clk_i -clock clk #Gain : 0.02761 Cov : 85.16091 S@TC : 100.0
+115  control-1  RISCY_PMP_pmp_unit_i/n12108 -root_clock clk_i -clock clk #Gain : 0.04460 Cov : 85.20551 S@TC : 100.0
+116  observe    RISCY_PMP_pmp_unit_i/n4947 -root_clock clk_i -clock clk #Gain : 0.02654 Cov : 85.23205 S@TC : 100.0
+117  observe    RISCY_PMP_pmp_unit_i/n5887 -root_clock clk_i -clock clk #Gain : 0.02617 Cov : 85.25822 S@TC : 100.0
+118  control-1  if_stage_i/prefetch_128_prefetch_buffer_i/n226 -root_clock clk_i -clock if_stage_i/prefetch_128_prefetch_buffer_i/n1218 #Gain : 0.02612 Cov : 85.28434 S@TC : 100.0
+119  control-0  data_addr_pmp[18] -root_clock clk_i -clock clk #Gain : 0.02636 Cov : 85.31071 S@TC : 100.0
+120  control-0  id_stage_i/n2424 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.04368 Cov : 85.35439 S@TC : 100.0
+121  observe    RISCY_PMP_pmp_unit_i/n4854 -root_clock clk_i -clock clk #Gain : 0.02478 Cov : 85.37917 S@TC : 100.0
+122  control-0  data_addr_pmp[17] -root_clock clk_i -clock clk #Gain : 0.02853 Cov : 85.40770 S@TC : 100.0
+123  control-0  id_stage_i/decoder_i/n76 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.02470 Cov : 85.43240 S@TC : 100.0
+124  control-1  id_stage_i/decoder_i/n88 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.03427 Cov : 85.46666 S@TC : 100.0
+125  control-0  ex_stage_i/alu_i/n3380 -root_clock clk_i -clock clk #Gain : 0.02392 Cov : 85.49059 S@TC : 100.0
+126  observe    RISCY_PMP_pmp_unit_i/n3671 -root_clock clk_i -clock clk #Gain : 0.02413 Cov : 85.51471 S@TC : 100.0
+127  control-1  RISCY_PMP_pmp_unit_i/n11517 -root_clock clk_i -clock clk #Gain : 0.02656 Cov : 85.54127 S@TC : 100.0
+128  observe    RISCY_PMP_pmp_unit_i/n267 -root_clock clk_i -clock clk #Gain : 0.02406 Cov : 85.56532 S@TC : 100.0
+129  control-1  RISCY_PMP_pmp_unit_i/n36 -root_clock clk_i -clock clk #Gain : 0.04733 Cov : 85.61266 S@TC : 100.0
+130  observe    RISCY_PMP_pmp_unit_i/n5761 -root_clock clk_i -clock clk #Gain : 0.02400 Cov : 85.63666 S@TC : 100.0
+131  control-0  if_stage_i/n358 -root_clock clk_i -clock if_stage_i/n778 #Gain : 0.02368 Cov : 85.66033 S@TC : 100.0
+132  control-0  RISCY_PMP_pmp_unit_i/n432 -root_clock clk_i -clock clk #Gain : 0.04451 Cov : 85.70484 S@TC : 100.0
+133  control-1  id_stage_i/decoder_i/n563 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.02298 Cov : 85.72782 S@TC : 100.0
+134  observe    RISCY_PMP_pmp_unit_i/n532 -root_clock clk_i -clock clk #Gain : 0.02234 Cov : 85.75016 S@TC : 100.0
+135  control-0  RISCY_PMP_pmp_unit_i/n11876 -root_clock clk_i -clock clk #Gain : 0.02202 Cov : 85.77218 S@TC : 100.0
+136  control-1  RISCY_PMP_pmp_unit_i/n9329 -root_clock clk_i -clock clk #Gain : 0.06207 Cov : 85.83424 S@TC : 100.0
+137  control-1  ex_stage_i/alu_i/n2647 -root_clock clk_i -clock clk #Gain : 0.02241 Cov : 85.85665 S@TC : 100.0
+138  observe    RISCY_PMP_pmp_unit_i/n38 -root_clock clk_i -clock clk #Gain : 0.02142 Cov : 85.87807 S@TC : 100.0
+139  control-1  id_stage_i/decoder_i/n336 -root_clock clk_i -clock id_stage_i/n3547 #Gain : 0.02135 Cov : 85.89941 S@TC : 100.0
+140  observe    RISCY_PMP_pmp_unit_i/n3449 -root_clock clk_i -clock clk #Gain : 0.02128 Cov : 85.92069 S@TC : 100.0
+141  control-0  RISCY_PMP_pmp_unit_i/n11577 -root_clock clk_i -clock clk #Gain : 0.02033 Cov : 85.94102 S@TC : 100.0
+142  observe    RISCY_PMP_pmp_unit_i/n249 -root_clock clk_i -clock clk #Gain : 0.02024 Cov : 85.96127 S@TC : 100.0
+143  control-0  cs_registers_i/n1372 -root_clock clk_i -clock cs_registers_i/n4128 #Gain : 0.01960 Cov : 85.98087 S@TC : 100.0
+144  observe    RISCY_PMP_pmp_unit_i/n4855 -root_clock clk_i -clock clk #Gain : 0.01974 Cov : 86.00060 S@TC : 100.0
+145  observe    RISCY_PMP_pmp_unit_i/n5655 -root_clock clk_i -clock clk #Gain : 0.01929 Cov : 86.01990 S@TC : 100.0
+146  observe    RISCY_PMP_pmp_unit_i/n3750 -root_clock clk_i -clock clk #Gain : 0.01928 Cov : 86.03918 S@TC : 100.0
+147  observe    RISCY_PMP_pmp_unit_i/n5395 -root_clock clk_i -clock clk #Gain : 0.01905 Cov : 86.05824 S@TC : 100.0
+148  control-0  RISCY_PMP_pmp_unit_i/n3475 -root_clock clk_i -clock clk #Gain : 0.04237 Cov : 86.10061 S@TC : 100.0
+149  control-1  cs_registers_i/n1305 -root_clock clk_i -clock cs_registers_i/n4128 #Gain : 0.01902 Cov : 86.11964 S@TC : 100.0
+150  control-0  RISCY_PMP_pmp_unit_i/n4892 -root_clock clk_i -clock clk #Gain : 0.02860 Cov : 86.14823 S@TC : 100.0
+151  observe    RISCY_PMP_pmp_unit_i/n10 -root_clock clk_i -clock clk #Gain : 0.01853 Cov : 86.16676 S@TC : 100.0
+152  observe    RISCY_PMP_pmp_unit_i/n1863 -root_clock clk_i -clock clk #Gain : 0.01851 Cov : 86.18527 S@TC : 100.0
+# Test point search completed : 152 (requested count : 152) test points identified.
+# runtime : 1037.8346
+# end time : 18:19:53
+
+# test points for target "x_blocking"
+# start time : 18:19:53
+# runtime : 4.0393
+# end time : 18:19:57
+
+#+-------------------- TARGET-WISE TEST POINT SUMMARY ----------------+#
+# target : random_resistant
+#   reported test point count  : 152
+#   runtime                    : 1037.8346
+# target : untestable_logic
+#   reported test point count  : 0
+#   runtime                    : 0.4340
+# target : x_blocking
+#   reported test point count  : 0
+#   runtime                    : 4.0393
+# test points for shadow_wrapper
+#   reported test point count  : 0
+#   runtime                    : 0.0000
+#+--------------------------------------------------------------------+#
+
+#+------------------- UNIFIED TEST POINT SUMMARY ---------------------+#
+# total test points   : 152
+# total runtime       : 1042.3080
+#+--------------------------------------------------------------------+#

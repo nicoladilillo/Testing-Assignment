@@ -69,7 +69,7 @@ architecture tb of LBIST_complete_testbench is
 			LBIST_en: OUT std_logic
 		);
 	end component;
-    
+
     constant clock_t      	: time 	 := 20 ns;
 	signal clk, rst, rst_i  : std_logic;
 
