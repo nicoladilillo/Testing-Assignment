@@ -23,4 +23,9 @@ begin
 		end loop;	
 	end process;
 
+	
+	-- fixed unused values
+	data_out(N-1) <= '1';
+	data_out(N-2) <= '1';
+
 end arch;

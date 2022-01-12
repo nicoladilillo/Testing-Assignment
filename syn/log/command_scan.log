@@ -1,11 +1,11 @@
 #@ # 
-#@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Dec 28 16:57:24 2021
+#@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
+#@ # Date:   Wed Jan 12 16:13:05 2022
 #@ # Run by: s284963@po.polito.it
 #@ 
 
-source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.setup
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.setup
+source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.setup
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.setup
 
 #@ #
 #@ #		".synopsys_dc.setup" Initialization File for
@@ -62,7 +62,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   lappend auto_path [file join ${synopsys_root} auxx syn lib]      
 #@   package require cae
 #@ }
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/tm.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/tm.tcl
 
 #@ # -*- tcl -*-
 #@ #
@@ -411,7 +411,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ #	Calls 'path add' to paths to the list of module search paths.
 #@ 
 #@ proc ::tcl::tm::roots {paths} {
-#@     lassign [split [package present Tcl] .] major minor
+#@     regexp {^(\d+)\.(\d+)} [package present Tcl] - major minor
 #@     foreach pa $paths {
 #@ 	set p [file join $pa tcl$major]
 #@ 	for {set n $minor} {$n >= 0} {incr n -1} {
@@ -430,9 +430,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # the chain.
 #@ 
 #@ if {![interp issafe]} {::tcl::tm::Defaults}
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/tm.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/tm.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/package.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/package.tcl
 
 #@ # package.tcl --
 #@ #
@@ -1156,7 +1156,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@     foreach key {load source} {
 #@ 	foreach filespec $opts(-$key) {
 #@ 	    lassign $filespec filename proclist
-#@ 	    
+#@ 
 #@ 	    if { [llength $proclist] == 0 } {
 #@ 		set cmd "\[list $key \[file join \$dir [list $filename]\]\]"
 #@ 		lappend cmdList $cmd
@@ -1174,9 +1174,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ }
 #@ 
 #@ interp alias {} ::pkg::create {} ::tcl::Pkg::Create
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/package.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/package.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/pkgIndex.tcl
 
 #@ # Copyright (c) 2016 Synopsys, Inc. This Synopsys software and all
 #@ # associated documentation are proprietary to Synopsys, Inc. and may
@@ -1187,16 +1187,15 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 
 #@ package ifneeded cae        1.0 [list source [file join $dir syn.tcl]]
 #@ package ifneeded cae::utils 1.0 [list source [file join $dir utils utils.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/iwidgets4.1/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/iwidgets4.1/pkgIndex.tcl
 
 #@ # Tcl package index file
-#@ package ifneeded iwidgets 4.1 "
+#@ package ifneeded iwidgets 4.1 [list ::apply {dir {
 #@   package require itk 4
 #@    namespace eval ::iwidgets {
 #@        namespace export *
-#@        variable library [file dirname [info script]]
 #@        variable version 4.1
 #@   }
 #@   source [file join $dir colors.itcl]
@@ -1256,15 +1255,10 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   source [file join $dir toolbar.itk]
 #@   source [file join $dir watch.itk]
 #@   package provide iwidgets 4.1
-#@ "
-#@ 
-#@ package ifneeded Iwidgets 4.1 "
-#@   package require iwidgets 4.1
-#@   package provide Iwidgets 4.1
-#@ "
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/iwidgets4.1/pkgIndex.tcl
+#@ }} $dir]
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/iwidgets4.1/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsTclPro/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsTclPro/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.1
 #@ # This file is generated by the "pkg_mkIndex -direct" command
@@ -1277,9 +1271,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # full path name of this file's directory.
 #@ 
 #@ package ifneeded snpsTclPro 1.0 [list source [file join $dir			snpsTclPro.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsTclPro/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsTclPro/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsTest/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsTest/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.1
 #@ # This file is generated by the "pkg_mkIndex -direct" command
@@ -1292,9 +1286,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # full path name of this file's directory.
 #@ 
 #@ package ifneeded snpsTest 1.0 [list source [file join $dir snpsTest.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsTest/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsTest/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsUtils/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsUtils/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.1
 #@ # This file is generated by the "pkg_mkIndex -direct" command
@@ -1307,22 +1301,22 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # full path name of this file's directory.
 #@ 
 #@ package ifneeded snpsUtils 1.0 [list source [file join $dir snpsUtils.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/snpsUtils/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/snpsUtils/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/pkgIndex.tcl
 
 #@ package ifneeded Itcl 3.4 {load {} Itcl}
 #@ package ifneeded tbcload 1.7 {load {} tbcload}
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/snps_tcl/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/snps_tcl/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/platform/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/platform/pkgIndex.tcl
 
-#@ package ifneeded platform        1.0.13 [list source [file join $dir platform.tcl]]
+#@ package ifneeded platform        1.0.14 [list source [file join $dir platform.tcl]]
 #@ package ifneeded platform::shell 1.1.4 [list source [file join $dir shell.tcl]]
 #@ 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/platform/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/platform/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/tcltest/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/tcltest/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.1
 #@ # This file is generated by the "pkg_mkIndex -direct" command
@@ -1335,16 +1329,16 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # full path name of this file's directory.
 #@ 
 #@ if {![package vsatisfies [package provide Tcl] 8.5]} {return}
-#@ package ifneeded tcltest 2.3.8 [list source [file join $dir tcltest.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/tcltest/pkgIndex.tcl
+#@ package ifneeded tcltest 2.4.0 [list source [file join $dir tcltest.tcl]]
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/tcltest/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/msgcat/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/msgcat/pkgIndex.tcl
 
 #@ if {![package vsatisfies [package provide Tcl] 8.5]} {return}
-#@ package ifneeded msgcat 1.5.2 [list source [file join $dir msgcat.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/msgcat/pkgIndex.tcl
+#@ package ifneeded msgcat 1.6.0 [list source [file join $dir msgcat.tcl]]
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/msgcat/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/http1.0/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/http1.0/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.0
 #@ # This file is generated by the "pkg_mkIndex" command
@@ -1357,21 +1351,21 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # full path name of this file's directory.
 #@ 
 #@ package ifneeded http 1.0 [list tclPkgSetup $dir http 1.0 {{http.tcl source {httpCopyDone httpCopyStart httpEof httpEvent httpFinish httpMapReply httpProxyRequired http_code http_config http_data http_formatQuery http_get http_reset http_size http_status http_wait}}}]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/http1.0/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/http1.0/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/http/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/http/pkgIndex.tcl
 
 #@ if {![package vsatisfies [package provide Tcl] 8.6]} {return}
-#@ package ifneeded http 2.8.8 [list tclPkgSetup $dir http 2.8.8 {{http.tcl source {::http::config ::http::formatQuery ::http::geturl ::http::reset ::http::wait ::http::register ::http::unregister ::http::mapReply}}}]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/http/pkgIndex.tcl
+#@ package ifneeded http 2.8.9 [list tclPkgSetup $dir http 2.8.9 {{http.tcl source {::http::config ::http::formatQuery ::http::geturl ::http::reset ::http::wait ::http::register ::http::unregister ::http::mapReply}}}]
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/http/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/dde/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/dde/pkgIndex.tcl
 
 #@ if {([info commands ::tcl::pkgconfig] eq "")
 #@ 	|| ([info sharedlibextension] ne ".dll")} return
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/dde/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/dde/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/opt/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/opt/pkgIndex.tcl
 
 #@ # Tcl package index file, version 1.1
 #@ # This file is generated by the "pkg_mkIndex -direct" command
@@ -1385,15 +1379,15 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 
 #@ if {![package vsatisfies [package provide Tcl] 8.2]} {return}
 #@ package ifneeded opt 0.4.6 [list source [file join $dir optparse.tcl]]
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/opt/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/opt/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/reg/pkgIndex.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/reg/pkgIndex.tcl
 
 #@ if {([info commands ::tcl::pkgconfig] eq "")
 #@ 	|| ([info sharedlibextension] ne ".dll")} return
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/tcllib/lib/tcl8.6/reg/pkgIndex.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/tcllib/lib/tcl8.6/reg/pkgIndex.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/syn.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/syn.tcl
 
 #@ # Copyright (c) 2016 Synopsys, Inc. This Synopsys software and all
 #@ # associated documentation are proprietary to Synopsys, Inc. and may
@@ -1431,7 +1425,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@         source ${::cae::selfdir}/${::cae::script}
 #@     }
 #@ }
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/auto_path_groups.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/auto_path_groups.tcl
 
 #@ # Copyright (c) 2016-2017 Synopsys, Inc. This Synopsys software and all
 #@ # associated documentation are proprietary to Synopsys, Inc. and may
@@ -1441,7 +1435,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # associated documentation is strictly prohibited.
 #@ 
 #@ package require cae::utils
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/utils/utils.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/utils/utils.tcl
 
 #@ # Copyright (c) 2016 Synopsys, Inc. This Synopsys software and all
 #@ # associated documentation are proprietary to Synopsys, Inc. and may
@@ -1467,7 +1461,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@     }
 #@     return
 #@ }
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/utils/utils.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/utils/utils.tcl
 
 #@ 
 #@ namespace eval ::cae {
@@ -1683,7 +1677,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@         echo [::cae::utils::msg i "Creating macro path groups..."]
 #@         if { [shell_is_in_topographical_mode] } {
 #@             #set macro_cells [all_macro_cells]
-#@             set macro_cells [remove_from_collection [all_macro_cells] [get_cells -quiet -hier -all -filter "is_physical_only==true"]]
+#@             #set macro_cells [remove_from_collection [all_macro_cells] [get_cells -quiet -hier -all -filter "is_physical_only==true"]]
+#@ 	    set macro_cells [remove_from_collection [all_macro_cells] [get_cells -quiet -hier -all -filter "is_physical_only==true || is_block_abstraction==true"]]	
 #@         } else {
 #@             set macro_cells [get_cells -hier * -filter "is_macro_cell == true"]
 #@         }
@@ -1847,9 +1842,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@         { -skip "do not restore user path groups" "" boolean optional }
 #@     }
 #@ 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/auto_path_groups.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/auto_path_groups.tcl
 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lib/syn.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lib/syn.tcl
 
 #@ 
 #@ if { [string compare $dc_shell_mode "tcl"] == 0 } {
@@ -1887,7 +1882,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@     source $synopsys_root/auxx/syn/.dc_procs.tcl
 #@   }
 #@ }
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/.dc_common_procs.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/.dc_common_procs.tcl
 
 #@ ##############################################################################
 #@ #
@@ -2085,9 +2080,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ }
 #@ define_proc_attributes _Variable_Groups_Get_Variables_Of_Group -hidden
 #@ 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/.dc_common_procs.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/.dc_common_procs.tcl
 
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/.dc_procs.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/.dc_procs.tcl
 
 #@ ##############################################################################
 #@ #
@@ -3029,8 +3024,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   return [eval execute_command_and_create_cel_from_scratch "org_copy_design" $args]
 #@ }
 #@ 
-#@ define_proc_attributes copy_design -hide_body   -info " copy_design"   -define_args    {{"" "List of designs to be copied" "design_list" list {required}}
-#@     {"" "Name of new design or target file" "target_name" string {required}}}
+#@ define_proc_attributes copy_design -hide_body   -info " copy_design"   -define_args    {{"design" "List of designs to be copied" "design_list" list {required}}
+#@     {"name" "Name of new design or target file" "target_name" string {required}}}
 #@ 
 #@ ##############################################################################
 #@ #  PROCEDURE:   create_design
@@ -3043,8 +3038,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   return [eval execute_command_and_create_cel_from_scratch "org_create_design" $args]
 #@ }
 #@ 
-#@ define_proc_attributes create_design -hide_body   -info " Creates a design in dc_shell memory"   -define_args    {{"" "name of the design to create" "<design_name>" string {required}}
-#@     {"" "name of file for design; optional" "<file_name>" string {optional}}}
+#@ define_proc_attributes create_design -hide_body   -info " Creates a design in dc_shell memory"   -define_args    {{"design" "name of the design to create" "<design_name>" string {required}}
+#@     {"name" "name of file for design; optional" "<file_name>" string {optional}}}
 #@ 
 #@ ##############################################################################
 #@ #  PROCEDURE:   reset_design
@@ -3068,8 +3063,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   return [eval execute_command_and_create_cel_from_scratch "org_rename_design" $args]
 #@ }
 #@ 
-#@ define_proc_attributes rename_design -hide_body   -info " rename_design"   -define_args    {{"" "List of designs to be renamed" "design_list" list {required}}
-#@     {"" "Name of new design or target file" "target_name" string {required}}}
+#@ define_proc_attributes rename_design -hide_body   -info " rename_design"   -define_args    {{"design" "List of designs to be renamed" "design_list" list {required}}
+#@     {"name" "Name of new design or target file" "target_name" string {required}}}
 #@ 
 #@ }
 #@ 
@@ -3267,6 +3262,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ proc _snps_array_peek { level ary } {
 #@     upvar #$level $ary loc_ary
 #@     set ret [list]
+#@     if {[array exists loc_ary] == 0} {
+#@       return $ret
+#@     }
 #@     if {[catch {set token [array startsearch loc_ary]}]} {
 #@       return $ret
 #@     }
@@ -3345,7 +3343,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 
 #@ }
 #@ 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/.dc_procs.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/.dc_procs.tcl
 
 #@ 
 #@ # Temporary fix for the LMC_HOME variable- set it to an empty string 
@@ -3368,7 +3366,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ # from the System Variable Group 
 #@ set link_library  { * your_library.db }
 #@ 
-#@ set search_path [list . ${synopsys_root}/libraries/syn ${synopsys_root}/minpower/syn ${synopsys_root}/dw/syn_ver ${synopsys_root}/dw/sim_ver]
+#@ set search_path [list . ${synopsys_root}/libraries/syn ${synopsys_root}/dw/syn_ver ${synopsys_root}/dw/sim_ver]
 #@ set target_library  your_library.db
 #@ set synthetic_library  ""
 #@ set command_log_file  "./command.log"
@@ -3469,7 +3467,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@     set_app_var sh_source_logging $prev_sh_source_logging
 #@   }
 #@ }
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/scripts/list_duplicate_designs.tcl
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/scripts/list_duplicate_designs.tcl
 
 #@ ####################################################################### 
 #@ #
@@ -3524,7 +3522,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 
 #@ define_proc_attributes list_duplicate_designs     -info " List designs of same names"     -permanent     -define_args {
 #@     }
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/scripts/list_duplicate_designs.tcl
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/scripts/list_duplicate_designs.tcl
 
 #@ 
 #@ 
@@ -3573,9 +3571,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ #
 #@ set cache_dir_chmod_octal   "777"
 #@ set cache_file_chmod_octal  "666"
-#@ set cache_read   "~"
+#@ set cache_read   ""
 #@ set cache_read_info  "false"
-#@ set cache_write  "~"
+#@ set cache_write  ""
 #@ set cache_write_info   "false"
 #@ set synlib_dont_get_license  {}
 #@ set synlib_library_list   {DW01 DW02 DW03 DW04 DW05 DW06 DW07}
@@ -3962,6 +3960,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ set hdlin_generate_separator_style	"_"
 #@ set hdlin_ignore_textio_constructs      "TRUE"
 #@ set hdlin_infer_function_local_latches	"FALSE"
+#@ set hdlin_infer_local_sync_enable_only	"FALSE"
 #@ set hdlin_keep_signal_name		"all_driving"
 #@ set hdlin_module_arch_name_splitting	"FALSE"
 #@ set hdlin_preserve_sequential           "none"
@@ -4001,16 +4000,19 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ set hdlin_latch_always_async_set_reset   FALSE
 #@ set hdlin_ff_always_sync_set_reset   FALSE
 #@ set hdlin_ff_always_async_set_reset   TRUE
+#@ set hdlin_always_fsm_complete   FALSE
+#@ set hdlin_failsafe_fsm   FALSE
 #@ set hdlin_check_input_netlist   FALSE
 #@ set hdlin_check_no_latch   FALSE
-#@ set hdlin_enable_ieee_1735_support   FALSE
 #@ set hdlin_mux_for_array_read_sparseness_limit 90
+#@ set hdlin_tic_tic_discards_whitespace  FALSE
 #@ set hdlin_infer_mux   "default"
 #@ set hdlin_mux_oversize_ratio   100
 #@ set hdlin_mux_size_limit   32
 #@ set hdlin_mux_size_only    1
 #@ set hdlin_infer_multibit   "default_none"
 #@ set hdlin_enable_rtldrc_info "false"
+#@ set hdlin_enable_ieee_1735_support "false"
 #@ set hdlin_interface_port_ABI 3
 #@ set hdlin_interface_port_downto "FALSE"
 #@ set hdlin_shorten_long_module_name "false"
@@ -4025,6 +4027,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ set hdlin_enable_hier_naming "FALSE"
 #@ set hdlin_enable_elaborate_update "true"
 #@ set hdlin_vhdl_mixed_language_instantiation "FALSE"
+#@ set hdlin_netlist_unloaded_signals "FALSE"
 #@ set hdl_preferred_license   ""
 #@ set hdl_keep_licenses   "true"
 #@ set hlo_resource_allocation   "constraint_driven"
@@ -4746,9 +4749,11 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   group_variable hdl "hdlin_latch_always_async_set_reset"
 #@   group_variable hdl "hdlin_ff_always_sync_set_reset"
 #@   group_variable hdl "hdlin_ff_always_async_set_reset"
+#@   group_variable hdl "hdlin_always_fsm_complete"
+#@   group_variable hdl "hdlin_failsafe_fsm"
 #@   group_variable hdl "hdlin_check_input_netlist"
 #@   group_variable hdl "hdlin_check_no_latch"
-#@   group_variable hdl "hdlin_enable_ieee_1735_support"
+#@   group_variable hdl "hdlin_tic_tic_discards_whitespace"
 #@   group_variable hdl "hdlin_reporting_level"
 #@   group_variable hdl "hdlin_infer_mux"
 #@   group_variable hdl "hdlin_mux_oversize_ratio"
@@ -4778,6 +4783,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   group_variable hdl "hdlin_sv_interface_only_modules"
 #@   group_variable hdl "hdlin_intermediate_file_method"
 #@   group_variable hdl "hdlin_infer_function_local_latches"
+#@   group_variable hdl "hdlin_infer_local_sync_enable_only"
 #@   group_variable hdl "hdlin_module_arch_name_splitting"
 #@   group_variable hdl "hdlin_mux_size_min"
 #@   group_variable hdl "hdlin_prohibit_nontri_multiple_drivers"
@@ -4817,6 +4823,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   group_variable hdl "hdlin_enable_upf_compatible_naming"
 #@   group_variable hdl "hdlin_report_sequential_pruning"
 #@   group_variable hdl "hdlin_analyze_verbose_mode"
+#@   group_variable hdl "hdlin_enable_ieee_1735_support"
+#@   group_variable hdl "hdlin_netlist_unloaded_signals"
 #@ 
 #@   # "vhdlio" variables are variables pertaining to VHDL generation 
 #@   group_variable vhdlio "vhdllib_timing_mesg"
@@ -5237,7 +5245,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@   #for read_lib -html	
 #@   source ${synopsys_root}/auxx/syn/lc/read_lib_html_msg_list.tcl
 #@ }
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.dc_name_rules
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.dc_name_rules
 
 #@ #
 #@ 
@@ -5287,7 +5295,18 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ define_name_rules vhdl -map { {{"__","_"},{"_$",""}} }
 #@ 
 #@ ####/* Name rule for VHDL */
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.dc_name_rules
+#@ 
+#@ 
+#@ ####/* Name rule for System Verilog with keywords updated to 1800-2017 */
+#@ define_name_rules sverilog2017 -type net -allow "a-z A-Z 0-9 _ " 					  -first_restrict "_ 0-9"		
+#@ 
+#@ define_name_rules sverilog2017 -type port -allow "a-z A-Z 0-9 _ " 					  -first_restrict "_ 0-9"		
+#@ 
+#@ define_name_rules sverilog2017 -type cell -allow "a-z A-Z 0-9 _ " 					  -first_restrict "_ 0-9"		
+#@ define_name_rules sverilog2017 -reserved { "accept_on" "alias" "always" "always_comb"	"always_ff" "always_latch" "and" "assert" "assign"	"assume" "automatic" "before" "begin" "bind" "bins" "binsof" "bit" "break" "buf" "bufif0"	"bufif1" "byte" "case" "casex" "casez" "cell" "chandle" "checker" "class" "clocking" "cmos"	"config" "const" "constraint" "context" "continue" "cover" "covergroup" "coverpoint" "cross"	"deassign" "default" "defparam" "design" "disable" "dist" "do" "edge" "else" "end" "endcase"	"endchecker" "endclass" "endclocking" "endconfig" "endfunction" "endgenerate" "endgroup"	"endinterface" "endmodule" "endpackage" "endprimitive" "endprogram" "endproperty"	"endsequence" "endspecify" "endtable" "endtask" "enum" "event" "eventually" "expect" "export"	"extends" "extern" "final" "first_match" "for" "force" "foreach" "forever" "fork" "forkjoin"	"function" "generate" "genvar" "global" "highz0" "highz1" "if" "iff" "ifnone" "ignore_bins"	"illegal_bins" "implements" "implies" "import" "incdir" "include" "initial" "inout" "input"	"inside" "instance" "int" "integer" "interconnect" "interface" "intersect" "join" "join_any"	"join_none" "large" "let" "liblist" "library" "local" "localparam" "logic" "longint"	"macromodule" "matches" "medium" "modport" "module" "nand" "negedge" "nettype" "new" "nexttime"	"nmos" "nor" "noshowcancelled" "not" "notif0" "notif1" "null" "or" "output" "package" "packed"	"parameter" "pmos" "posedge" "primitive" "priority" "program" "property" "protected" "pull0"	"pull1" "pulldown" "pullup" "pulsestyle_ondetect" "pulsestyle_onevent" "pure" "rand" "randc"	"randcase" "randsequence" "rcmos" "real" "realtime" "ref" "reg" "reject_on" "release" "repeat"	"restrict" "return" "rnmos" "rpmos" "rtran" "rtranif0" "rtranif1" "s_always" "s_eventually"	"s_nexttime" "s_until" "s_until_with" "scalared" "sequence" "shortint" "shortreal"	"showcancelled" "signed" "small" "soft" "solve" "specify" "specparam" "static" "string" "strong"	"strong0" "strong1" "struct" "super" "supply0" "supply1" "sync_accept_on" "sync_reject_on"	"table" "tagged" "task" "this" "throughout" "time" "timeprecision" "timeunit" "tran" "tranif0"	"tranif1" "tri" "tri0" "tri1" "triand" "trior" "trireg" "type" "typedef" "union" "unique"	"unique0" "unsigned" "until" "until_with" "untyped" "use" "uwire" "var" "vectored" "virtual"	"void" "wait" "wait_order" "wand" "weak" "weak0" "weak1" "while" "wildcard" "wire" "with"	"within" "wor" "xnor" "xor"}		-special verilog -target_bus_naming_style {%s[%d]}		-flatten_multi_dimension_busses          -check_internal_net_name 	-check_bus_indexing 
+#@ ####/* Name rule for System Verilog with keywords updated to 1800-2017 */
+#@ ####/* END */
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.dc_name_rules
 
 #@ 
 #@ if { $synopsys_program_name == "psyn_gui"} {
@@ -5412,7 +5431,7 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 
 #@ if {[info exists ::env(SYNOPSYS_LC_ROOT)] && [file exists $::env(SYNOPSYS_LC_ROOT)/$::sh_arch/lc/bin/lc_shell_exec]} {
 #@     # make lc man pages search path override the default man page search path
-#@     set man_path [linsert $man_path 0 $::env(SYNOPSYS_LC_ROOT)/doc/lc/man]   
+#@     append man_path " $::env(SYNOPSYS_LC_ROOT)/doc/lc/man"
 #@ } else {
 #@     set lc_link "$::synopsys_root/$::sh_arch/syn/bin/lc_shell_exec"
 #@     while { [file exists $lc_link] && [file type $lc_link] == "link"} {
@@ -5421,12 +5440,12 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@     # resolve symbol-link to get $exec_path of lc_shell_exec
 #@     if { [file exists $lc_link] } {
 #@       set LC_ROOT [file dirname [file dirname [file dirname [file dirname $lc_link]]]]
-#@       set man_path [linsert $man_path 0 $LC_ROOT/doc/lc/man]
+#@       append man_path " $LC_ROOT/doc/lc/man"
 #@     }
 #@ } 
 #@ 
 #@ source ${synopsys_root}/auxx/syn/lc_commands.tbc
-#@ # -- Starting source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lc_commands.tbc
+#@ # -- Starting source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lc_commands.tbc
 
 #@ ##############################################################################
 #@ # Author : Liping Zhao
@@ -5442,21 +5461,21 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ }
 #@ tbcload::bceval {
 #@ TclPro ByteCode 2 0 1.7 8.5
-#@ 44 0 426 61 0 0 312 0 12 44 44 -1 -1
-#@ 426
-#@ `:G<!(H&s!/HW<!(3E<!2`8s!egwpv,l=6#/HW<!-Qr<!2`8s!5v!!!!v!!!/)PpvYIMd/Ie
-#@ 4,!1,|v!#0E<!;Atpv9uW<!:uS=!>,f=!CM1qv2&|=!A8#>!*BE<!QR`kw=>Ks!6#o9v.EW<
-#@ !E;kpvJSa<!!O594;&aW!CYo9v*E`<!C#GpvdN594=,aW!E_o9v*E`<!E#GpvdN594Xi^Z)H
-#@ ho9v*E`<!G#GpvdN594^8xW*Kqo9v*E`<!J#GpvdN594dyWT+N%p9v*E`<!M#GpvdN594HMa
-#@ W!P+p9v*E`<!P#GpvdN594nC53-S4p9v*E`<!R#GpvdN594MyaW!U:p9v*E`<!U#GpvdN594
-#@ ObaW!W@p9v*E`<!W#GpvdN594'CIH/ZIp9v*E`<!Y#GpvdN594TqaW!yOp9v*E`<!y#GpvdN
-#@ 5941*''1_Xp9v*E`<!^#GpvdN594u(yW*a^p9v*E`<!a#GpvdN594;fYZ2dgp9v*E`<!c#Gp
-#@ vdN594A5VW3gpp9v*E`<!f#Gpvw!!
+#@ 44 0 430 62 0 0 312 0 12 44 44 -1 -1
+#@ 430
+#@ a=G<!(H&s!/HW<!(3E<!2`8s!fjwpv2/YQ#/HW<!-Qr<!2`8s!5v!!!%v!!!*Qr<!3HN<!oV
+#@ '475v!!!3!!!!/oJ=!7;kpv:uW<!<&|=!@2o=!ES:qv3,f=!C>,>!*BE<!SXikw>AKs!6#o9
+#@ v.EW<!HG(qvJSa<!#XPT4<)aW!Dyo9v*E`<!D#GpveWPT4>/aW!Fbo9v*E`<!F#GpveWPT4Z
+#@ uw!*Iko9v*E`<!H#GpveWPT4`D!s*Lto9v*E`<!K#GpveWPT4fhro+O(p9v*E`<!N#GpveWP
+#@ T4IPaW!Q.p9v*E`<!Q#GpveWPT4pOPN-T7p9v*E`<!S#GpveWPT4N_aW!V=p9v*E`<!V#Gpv
+#@ eWPT4PeaW!XCp9v*E`<!X#GpveWPT4)Odc/xLp9v*E`<!Z#GpveWPT4UtaW!|Rp9v*E`<!|#
+#@ GpveWPT436BB1`xp9v*E`<!_#GpveWPT4v5vs*bap9v*E`<!b#GpveWPT4=rtu2ejp9v*E`<
+#@ !d#GpveWPT4CAqr3hsp9v*E`<!g#Gpvw!!
 #@ 44
-#@ @1IOwG+IOw5&>pvQXxOwI1IOwI1IOwI1IOwI1IOwI1IOwI1IOwI1IOw
+#@ @1IOwI7xOw7&>pvQXxOwI1IOwI1IOwI1IOwI1IOwI1IOwI1IOwI1IOw
 #@ 44
-#@ I%%n#;c(;v0g>a'?qwn#I%%n#I%%n#I%%n#I%%n#I%%n#I%%n#Hq^R#
-#@ 61
+#@ I%%n#E2qqv0g>a'?qwn#I%%n#I%%n#I%%n#I%%n#I%%n#I%%n#Hq^R#
+#@ 62
 #@ x
 #@ 4
 #@ ,CHr@
@@ -5496,21 +5515,34 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 20
 #@ lj|Z?qd,r@eLa:@iqEY?%xRQB
+#@ x
+#@ 6
+#@ !>PQ9/-v
 #@ p
-#@ 25 0 353 16 2 0 140 1 6 25 37 -1 -1
-#@ 353
-#@ 32fv!8^w!!pa#!!%6E<!v:u@-B?W<!(3E<!8,|Tv5/T=!7)>pvQks<!PSa<!/`ncB:Xs#)v*
-#@ <<!&<`W!7Ki<!;5>6#;>fv!E*<<!<^w!!8f!!!-/:3w4Ki<!?YUNw<G,>!8^w!!a9)!!&E&s
-#@ !18:3w4Ki<!?YUNw3lSs!3Bv!!WX9,!k5s1!DZqo+I_w!!y(#!!&E&s!2f&s!:8B=!3iSs!.
-#@ |o7-C^w!!+?!!!05c!,J^w!!4Z!!!&E&s!:8B=!<D,>!8^w!!KJv!!&E&s!1rA=!;Yq9-C^w
-#@ !!+?!!!1;l!,A^w!!+?!!!fqlwv5v!!!D!!!!gF#!!&E&s!:8B=!4,tl#,eN48;I%!!'BW<!
-#@ '69!s@;yH!GN2,!FUqw!#0E<!3AU3wk2_Q5l#3,!.oAv!,,:3wU2io+WyFq+8DPt!5v!!!-!
-#@ !!!,?!!!z
-#@ 25
-#@ 6P17#)^Fo#QG5:vP4IOwLCdOwcpIOw7!
-#@ 37
-#@ &w*!!58qE'Rl3<!sG|''!w!!!it&S#px6L.`b47,c6v1%-!
-#@ 16
+#@ 29 0 418 18 2 0 156 1 7 29 41 -1 -1
+#@ 418
+#@ 4;,>!8^w!!KJv!!,`&v!Wx;bB.A-0%v*<<!5>,>!fr2,!.oAv!#0E<!8u&s!5v!!!.!!!!7%
+#@ `H&:N2,!#+0*!w6N<!X/ucJlb#pv.`A9v7>o=!?qcjw7/B=!4oSs!YGUNwTJpiw(W3,!<nk#
+#@ !#0E<!:t;g%4;tl#Be64w==rH&F5v!!Af2,!:bY#!#0E<!C>YQ#88T=!?ryTv=,9s!5v!!!c
+#@ #!!!*Qr<!B43kw4;tl#F(x4w2/Gpv6#1%!WP6!Ckiy)Tv*<<!k-6,!y/:'!#0E<!82o=!B4m
+#@ 4w3&5pvc!/J/io2,!+|&v!crgl5l/3,!4>##!#0E<!B4m4w>4`H&;N2,!KsI%!#0E<!9Sp3w
+#@ m2_Q5io2,!+|&v!d&.36ci2,!+|&v!crgl58^w!!D5v!!gn?(!#0E<!B4m4w.NW<!Ev(g7.C
+#@ I.!&H/s!+NTq,?:u8F9>e`BFodl,v*<<!0#>6#7iSs!Wx;bB.A-0%v*<<!AMGY!H3*!!H3*!
+#@ !8^w!!-E!!!.ryX!z
+#@ 29
+#@ Ca8h%Mk17#/pXo#SG5:vP4IOwLCdOwcpIOw7!
+#@ 41
+#@ kfO1%/w*!!?bR'(Vr3<!vfP^'!w!!!it&S#px6L.`b47,c6v1%-!
+#@ 18
+#@ x
+#@ 0
+#@ 
+#@ x
+#@ 13
+#@ nEi'FrZ!iCnc%UA/v
+#@ x
+#@ 14
+#@ -,ZS?w:7hCu5(yG?Mw
 #@ x
 #@ 7
 #@ &OQ<@xe|+
@@ -5533,8 +5565,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 9
 #@ q3HQBb!cr@4v
 #@ x
-#@ 21
-#@ OfS405Kb50nEi'FrZ!iCnc%UA/v
+#@ 8
+#@ OfS405Kb50
 #@ x
 #@ 1
 #@ R!
@@ -5544,8 +5576,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 15
 #@ -#l#H8&Z)F5mNaEt-E-
 #@ x
-#@ 22
-#@ V:wLD5Q<JD*nmX?w:7hCu5(yG?Mw
+#@ 9
+#@ V:wLD5Q<JDP!
 #@ x
 #@ 8
 #@ %xRQB:p2TA
@@ -5555,29 +5587,32 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 8
 #@ qLK;@0dhTA
-#@ x
-#@ 0
-#@ 
 #@ 2
-#@ L 0 149 102 295 252 -1
-#@ C 0 266 14 -1 -1 278
+#@ L 0 214 102 360 317 -1
+#@ C 0 331 14 -1 -1 343
 #@ 0
-#@ 0 2
+#@ 1 4
+#@ 4
+#@ DQMV6
+#@ 0 0 256
+#@ 8
+#@ rmBq@NjkSA
+#@ 1 0 0
 #@ 9
 #@ rmBq@q,BCF4v
-#@ 0 0 0
+#@ 2 0 0
 #@ 4
 #@ %xRQB
-#@ 1 0 0
+#@ 3 0 0
+#@ x
+#@ 4
+#@ 8w`TA
 #@ x
 #@ 7
 #@ &OQ<@xe|+
 #@ x
 #@ 18
 #@ kaT5BnEi'Fh!cr@eRo;@Syw
-#@ x
-#@ 20
-#@ lj|Z?qd,r@eLa:@iqEY?%xRQB
 #@ x
 #@ 6
 #@ )LVTAx1%
@@ -5615,19 +5650,20 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 13
 #@ #k|Z?qd,r@u,aaE?v
 #@ p
-#@ 37 0 381 20 0 0 148 0 3 37 37 -1 -1
-#@ 381
-#@ w0E<!KN2,!EOhw!#0E<!+BE<!41fg&5v!!!/!!!!w-<<!^Kn<v>Me`BJ>'0.#3WW!0#>6#3#
-#@ Ts!TG;I/m&3,!/uJv!#0E<!Ga++'M`yTv8^w!!JGv!!*cvpv5JUNw'qrD!:1fg&5v!!!/!!!
-#@ !/oJ=!fKn<v>Me`BLP|f.#3WW!0#>6#82Ts!TG;I/o,3,!1,|v!#0E<!CYCqvxKn<v>Me`BJ
-#@ >'0.#3WW!0#>6#:8Ts!TG;I/m&3,!/uJv!#0E<!H=J*'M`yTv8^w!!JGv!!*cvpv:v3-&'qr
-#@ D!:1fg&5v!!!/!!!!48#>!^Kn<v>Me`BJ>'0.#3WW!0#>6#<>Ts!TG;I/m&3,!/uJv!#0E<!
-#@ J=J*'M`yTv8^w!!JGv!!*cvpv<4ic&'qrD!:1fg&5v!!!/!!!!6D5>!_Kn<v>Me`BJ>'0.#3
-#@ WW!0#>6#>DTs!TG;I/m&3,!/uJv!#0E<!MCS*'M`yTvz
-#@ 37
-#@ 9egm#KeHK%KeHK%KeHK%?ur!!K;s!!K;s!!K;s!!K;s!!/!
-#@ 37
-#@ ^'nK%j@<L%j@<L%nRr-&`sMR#jsMR#jsMR#jsMR#ipMR#/!
+#@ 39 0 404 20 0 0 160 0 3 39 39 -1 -1
+#@ 404
+#@ w0E<!KN2,!Gx%%!#0E<!+`vpvTvZH/m&3,!/uJv!#0E<!9=J*'M`yTv8^w!!JGv!!*cvpv2/
+#@ YQ#'qrD!:1fg&5v!!!/!!!!,|/=!dKn<v>Me`BJ>'0.#3WW!0#>6#6,Ts!TG;I/m&3,!/uJv
+#@ !#0E<!Lm=+'M`yTv8^w!!a7#!!*cvpv7y60%'qrD!QV-4.5v!!!3!!!!1&|=!+`vpvMvf`B3
+#@ n_c&v*<<!3c`W!.c8X!xSa<!=N2,!Jm@%!w6N<!0W&=!5v.w;)No7-G^w!!/K!!!2ylf%x(k
+#@ q+.|Js!5v!!!J!!!!+Qr<!?eUqv*m!m#EaDbB/JHK%v*<<!7&B9vxSa<!=N2,!Jm@%!w6N<!
+#@ 0W&=!7v.w;)No7-G^w!!/K!!!4nMH&x(kq+.|Js!5v!!!J!!!!+Qr<!Aqgqv*m!m#EaDbB/J
+#@ HK%v*<<!:5|TvxSa<!=N2,!Jm@%!w6N<!0W&=!9v.w;)No7-G^w!!/K!!!6+/*'y+kq++BN!
+#@ !
+#@ 39
+#@ ;vIOwKeHK%KeHK%KeHK%K=!kwK!P+'K!P+'K!P+'K!P+'8uJv
+#@ 39
+#@ b9+L%j@<L%j@<L%1nn*'iLwL.j^lL.j^lL.j^lL.iUQ1.@8Kv
 #@ 20
 #@ x
 #@ 12
@@ -5671,8 +5707,8 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 18
 #@ kaT5BnEi'Fh!cr@eRo;@Syw
 #@ x
-#@ 20
-#@ lj|Z?qd,r@eLa:@iqEY?%xRQB
+#@ 19
+#@ kaT5BnEi'Fh!cr@eRo;@05A&
 #@ x
 #@ 24
 #@ kaT5Bd@YjB'p/fDsT/CFyqEY?m'cSA
@@ -5695,19 +5731,19 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 15
 #@ 3aMTAu'V5Bq`ewGh0<-
 #@ p
-#@ 36 0 297 15 0 0 144 0 3 36 36 -1 -1
-#@ 297
+#@ 40 0 331 16 0 0 160 0 3 40 40 -1 -1
+#@ 331
 #@ w0E<!-fSs!O,uc/ViA9v,|8X!M`yTv8^w!!B/v!!w-*!!*`vpv'qrD!-A77w.r=6#Omm<v>M
 #@ e`BBKMT+#3WW!w0E<!3#Ts!O,uc/ViA9v2o8X!M`yTv8^w!!B/v!!w-*!!-&tl#'qrD!-A77
 #@ w0/tl#Omm<v>Me`BBKMT+#3WW!w0E<!5)Ts!O,uc/ViA9v4u8X!M`yTv8^w!!B/v!!w-*!!/
 #@ 8UNw'qrD!-A77w2AUNwOmm<v>Me`BBKMT+#3WW!w0E<!7/Ts!O,uc/ViA9v6&9X!M`yTv8^w
 #@ !!B/v!!w-*!!1J60%'qrD!-A77w4S60%Omm<v>Me`BBKMT+#3WW!w0E<!95Ts!O,uc/ViA9v
-#@ 8,9X!M`yTvz
-#@ 36
-#@ /JHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%
-#@ 36
-#@ QMbpvZMbpvZMbpvZMbpvZMbpvZMbpvZMbpvZMbpvYMbpv
-#@ 15
+#@ 8,9X!M`yTv8^w!!B/v!!w-*!!3ylf%'qrD!-A77w6elf%Omm<v'0!!
+#@ 40
+#@ /JHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%CeHK%
+#@ 40
+#@ QMbpvZMbpvZMbpvZMbpvZMbpvZMbpvZMbpvZMbpvZMbpvYMbpv
+#@ 16
 #@ x
 #@ 4
 #@ wm<eD
@@ -5737,6 +5773,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 18
 #@ kaT5BnEi'Fh!cr@eRo;@Syw
+#@ x
+#@ 19
+#@ kaT5BnEi'Fh!cr@eRo;@05A&
 #@ x
 #@ 24
 #@ kaT5Bd@YjB'p/fDsT/CFyqEY?m'cSA
@@ -5822,15 +5861,15 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 5
 #@ %N|(FA!
 #@ p
-#@ 10 0 92 13 0 0 40 0 5 10 10 -1 -1
-#@ 92
+#@ 10 0 94 14 0 0 40 0 5 10 10 -1 -1
+#@ 94
 #@ )Nr<!8^w!!;o!!!w3E<!19N<!3|`W!7MkUv;u&s!5v!!!4!!!!2G^3w/)Ppv:&0s!5/|X!-B
-#@ W<!?PC3w-`8s!75|X!-BW<!<&#pv2>UNw,?W<!49*!!
+#@ W<!?PC3w-`8s!75|X!-BW<!7NE<!8`8s!5rr<!8S:qvv!!
 #@ 10
-#@ Jwao#CV17#-0!
+#@ Jwao#CV17#/0!
 #@ 10
-#@ |3yS#?Pt6#*-!
-#@ 13
+#@ |3yS#AbUm#*-!
+#@ 14
 #@ x
 #@ 14
 #@ #k|Z?r0H8Aw9fwGJ%%
@@ -5864,6 +5903,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 19
 #@ ,v(Z?!aiaEmo3mBm+BRAyOl,
+#@ x
+#@ 4
+#@ 8w`TA
 #@ x
 #@ 21
 #@ w3F/D'gi'FrZ!iCdIa:@VhrU@?v
@@ -6292,23 +6334,24 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 19
 #@ ,v(Z?!aiaEmo3mBm+BRAyOl,
 #@ x
-#@ 8
-#@ o4jY?m'cSA
+#@ 14
+#@ o4jY?m'cSA:uMTAxA#
 #@ p
-#@ 27 0 366 30 2 0 132 1 8 27 31 -1 -1
-#@ 366
-#@ w0E<!1#T=!/r=pv2G^3w-u4Uv6/Ypv9u&s!5v!!!Q!!!!7kZjwgfvdB>'6<*v*<<!,#tl#9i
-#@ A=!Ebpiw8S60%=MGY!VyQK%8^w!!.H!!!2ylf%LGe`B.A-0%v*<<!G1);v8^w!!2V'!!EL_w
-#@ !+GPqB<jTZ)v*<<!!oxR5e:NH&<;YUvPpm<vGhe`B^HGT4v*<<!H^/*'L!f`'GR+'(>bq9-X
-#@ ^w!!5|!!!;RFB(Gk#t!COAI&;N2,!+|&v!d&.36VyQK%8^w!!a7#!!/&#t!##heBOkYc/v*<
-#@ <!@yq9-Q^w!!.H!!!<a'w)MJe`B+&13wv*<<!9l0=!G>GpvJSa<!MpB?)Hs|Z):blf%#BO8s
-#@ 5cTK%8^w!!OVv!!hq?(!#0E<!N&#pvUyFq+P#wS7Jv!!!=>Ts!0f#8-gxpr+7>Gt!5v!!!:!
-#@ !!!7kZjw=/C=!O,,pvJSa<!/!!
-#@ 27
-#@ =Xv+'`Q,N%Yp`1%PLdjwZsrL%Txmn#V4Uv
+#@ 31 0 418 32 2 0 152 1 8 31 35 -1 -1
+#@ 418
+#@ =Sq9-|^w!!E8v!!#**!!&<`W!2?W<!-BE<!1H<<!4c&=!B4`H&*#PdBEfIQ,v*<<!w0E<!75
+#@ T=!4;kpv2G^3w-u4Uv6/Ypv:&0s!5v!!!Q!!!!9vmjwgfvdB>'6<*v*<<!.5UNw;uS=!ItQK
+#@ %:elf%>Vbt!Xn2-&8^w!!.H!!!4nMH&MJe`B.A-0%v*<<!J@DVv8^w!!2V'!!EL_w!+GPqB<
+#@ jTZ)v*<<!#uxR5gL/*'>GtpvPpm<vIne`B^HGT4v*<<!L!f`'P9GB(Jga|(>bq9-X^w!!5|!
+#@ !!=d'w)J%?:vCOAI&<N2,!+|&v!d&.36Xn2-&8^w!!a7#!!0/>:v##heBOkYc/v*<<!A_q9-
+#@ Q^w!!.H!!!>s|Z)NMe`B+&13wv*<<!9l0=!JDPpvJSa<!Q-w!*K3?<*<tMH&#BO8s7u5-&8^
+#@ w!!OVv!!hq?(!#0E<!Q,,pvWhXq+P#wS7Jv!!!>D|s!2l#8-ig-s+9JYt!5v!!!:!!!!9vmj
+#@ w=/C=!R25pvJSa<!1!!
 #@ 31
-#@ 6@&a0l*sL%!w!!!@.Wp4WF.4wRxy4w#@;D)F;X!
-#@ 30
+#@ 8bgm#Zsv+'`Q,N%Yp`1%PLdjwZsrL%Txmn#V4Uv
+#@ 35
+#@ |Ir;v>@&a0l*sL%!w!!!@.Wp4WF.4wRxy4w#@;D)F;X!
+#@ 32
 #@ x
 #@ 4
 #@ *dmID
@@ -6333,6 +6376,12 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 1
 #@ >v
+#@ x
+#@ 19
+#@ kaT5BnEi'Fh!cr@eRo;@05A&
+#@ x
+#@ 23
+#@ lj|Z?!aiaEw>m#H8&Z)F5mNaEt-E-
 #@ x
 #@ 27
 #@ kaT5BfR:LCfR9Z?qd,r@rfR.Dk^CkBf^;-
@@ -6399,44 +6448,47 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 0
 #@ 
 #@ 2
-#@ L 0 119 154 290 274 -1
-#@ C 0 307 12 -1 -1 317
+#@ L 0 171 154 342 326 -1
+#@ C 0 359 12 -1 -1 369
 #@ 0
-#@ 1 7
+#@ 2 8
 #@ 8
 #@ o4jY?m'cSA
 #@ 0 0 256
+#@ 5
+#@ f9&P9d!
+#@ 1 0 256
 #@ 4
 #@ g3IID
-#@ 1 0 0
+#@ 2 0 0
 #@ 3
 #@ d4w,
-#@ 2 0 0
+#@ 3 0 0
 #@ 4
 #@ lWNeD
-#@ 3 0 0
+#@ 4 0 0
 #@ 9
 #@ ,uk)Fdd;JD1v
-#@ 4 0 0
+#@ 5 0 0
 #@ 4
 #@ u3uSA
-#@ 5 0 0
+#@ 6 0 0
 #@ 5
 #@ bT/bE>v
-#@ 6 0 0
+#@ 7 0 0
 #@ x
 #@ 15
 #@ qd,r@s&O+E,=^Z?YYK+
 #@ p
-#@ 9 0 78 12 0 0 36 0 5 9 9 -1 -1
-#@ 78
+#@ 9 0 80 13 0 0 36 0 5 9 9 -1 -1
+#@ 80
 #@ /rS=!1Gwjw'E&s!H=rH&*TA9v?Ae`B4v&*'v*<<!2uA=!1rSs!8BW<!:,,pv/#YQ#7c&v!.E
-#@ W<!<,,pv15:3w4Z8X!6G(qvv!!
+#@ W<!<,,pv15:3w88UNw.EW<!49*!!
 #@ 9
-#@ AqCm#CV17#(!
+#@ AqCm#CV17#*!
 #@ 9
-#@ TFxS#?Pt6#%!
-#@ 12
+#@ TFxS#AbUm#%!
+#@ 13
 #@ x
 #@ 18
 #@ kaT5Bm<NaE1fsiCqRo;@Syw
@@ -6470,6 +6522,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ x
 #@ 19
 #@ ,v(Z?!aiaEmo3mBm+BRAyOl,
+#@ x
+#@ 4
+#@ 8w`TA
 #@ x
 #@ 21
 #@ w3F/D'gi'FrZ!iC`jbSAp#K^F<v
@@ -6555,15 +6610,15 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 11
 #@ 0Q%hCgKxhC,tEw
 #@ p
-#@ 10 0 95 14 0 0 40 0 5 10 10 -1 -1
-#@ 95
+#@ 10 0 97 15 0 0 40 0 5 10 10 -1 -1
+#@ 97
 #@ /rS=!1Gwjw'E&s!H=rH&9N2,!4>##!#0E<!1NE<!@4`H&-fvpv5|8X!6Sp3w25bpv/o=6#7)
-#@ tl#2Q/X!.EW<!5TN<!7`8s!9;|X!-BW<!>&#pv4P60%(w!!
+#@ tl#2Q/X!.EW<!5TN<!7`8s!9;|X!-BW<!9NE<!:`8s!7#s<!z
 #@ 10
-#@ GFIOwG17n#/6!
+#@ GFIOwG17n#1<!
 #@ 10
-#@ Vv)7#Gh17#,-!
-#@ 14
+#@ Vv)7#Gh17#.-!
+#@ 15
 #@ x
 #@ 18
 #@ kaT5Bm<NaE1fsiCqRo;@Syw
@@ -6604,6 +6659,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 19
 #@ ,v(Z?!aiaEmo3mBm+BRAyOl,
 #@ x
+#@ 5
+#@ s85)F1v
+#@ x
 #@ 21
 #@ w3F/D'gi'FrZ!iC`jbSAp#K^F<v
 #@ 0
@@ -6624,9 +6682,9 @@ source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.se
 #@ 0
 #@ 0
 #@ }
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/auxx/syn/lc_commands.tbc
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/auxx/syn/lc_commands.tbc
 
-#@ # -- End source /eda/synopsys/2018-19/RHELx86/SYN_2018.06-SP4/admin/setup/.synopsys_dc.setup
+#@ # -- End source /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/admin/setup/.synopsys_dc.setup
 
 source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
 #@ # -- Starting source /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_nangate.tcl
@@ -6672,8 +6730,8 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ set test_default_scan_style multiplexed_flip_flop
 #@ 
 #@ ### Set pins functionality ###
-#@ set_dft_signal -view existing_dft -type ScanEnable -port test_en_i
-#@ set_dft_signal -view spec -type ScanEnable -port test_en_i 
+#@ set_dft_signal -view existing_dft -type ScanEnable -active_state 1  -port test_en_i
+#@ set_dft_signal -view spec -type ScanEnable -active_state 1 -port test_en_i 
 #@ set_dft_signal -view existing_dft -type TestMode -active_state 1 -port test_mode_tp
 #@ set_dft_signal -view spec -type TestMode -active_state 1 -port test_mode_tp
 #@ set_dft_signal -view existing_dft -type lbistEnable -active_state 1 -port lbist_en
@@ -6688,7 +6746,7 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ set_testability_configuration   -control_signal test_mode_tp -test_points_per_scan_cell 1
 #@ set_testability_configuration -target random_resistant
 #@ set_testability_configuration -target x_blocking
-#@ # set_testability_configuration -target untestable_logic -max_test_points 100
+#@ set_testability_configuration -target untestable_logic
 #@ set_testability_configuration -target core_wrapper -reuse_threshold 100
 #@ 
 #@ #set_testability_configuration -target random_resistant -random_pattern_count 1000 -target_test_coverage 95 
@@ -6702,6 +6760,7 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ 
 #@ create_test_protocol -infer_asynch -infer_clock
 #@ dft_drc
+#@ run_test_point_analysis
 #@ preview_dft
 #@ insert_dft
 #@ 

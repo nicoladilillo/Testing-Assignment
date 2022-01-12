@@ -1,0 +1,19 @@
+#+--------------SPYGLASS DFT UNIFIED TEST POINTS REPORT---------------+#
+# date : 2022-01-12
+# TestMAX Advisor : R-2020.12
+# TestMAX DFT     : R-2020.09-SP2
+
+# test points for target "untestable_logic"
+# start time : 13:08:26
+# runtime : 0.3099
+# end time : 13:08:26
+
+# test points for target "x_blocking"
+# start time : 13:08:26
+# runtime : 5.3047
+# end time : 13:08:31
+
+
+#+------------------- UNIFIED TEST POINT SUMMARY ---------------------+#
+# No test point target was specified
+#+--------------------------------------------------------------------+#

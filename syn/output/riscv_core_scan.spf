@@ -5,8 +5,8 @@ Header {
     Title 
     "Minimal STIL for design `riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800'"
     ;
-    Date "Tue Dec 28 17:00:04 2021";
-    Source "DFT Compiler O-2018.06-SP4";
+    Date "Wed Jan 12 16:17:46 2022";
+    Source "DFT Compiler R-2020.09-SP2";
 }
 Signals {
     "apu_master_flags_i[0]" In;
@@ -923,112 +923,112 @@ SignalGroups {
 }
 ScanStructures {
     ScanChain "1" {
-        ScanLength 195;
+        ScanLength 204;
         ScanIn "test_si1";
         ScanOut "test_so1";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "2" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si2";
         ScanOut "test_so2";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "3" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si3";
         ScanOut "test_so3";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "4" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si4";
         ScanOut "test_so4";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "5" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si5";
         ScanOut "test_so5";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "6" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si6";
         ScanOut "test_so6";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "7" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si7";
         ScanOut "data_we_o";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "8" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si8";
         ScanOut "irq_id_o[4]";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "9" {
-        ScanLength 194;
+        ScanLength 204;
         ScanIn "test_si9";
         ScanOut "test_so9";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "10" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si10";
         ScanOut "test_so10";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "11" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si11";
         ScanOut "test_so11";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "12" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si12";
         ScanOut "test_so12";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "13" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si13";
         ScanOut "test_so13";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "14" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si14";
         ScanOut "test_so14";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "15" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si15";
         ScanOut "test_so15";
         ScanEnable "test_en_i";
         ScanMasterClock "clk_i";
     }
     ScanChain "16" {
-        ScanLength 194;
+        ScanLength 203;
         ScanIn "test_si16";
         ScanOut "test_so16";
         ScanEnable "test_en_i";

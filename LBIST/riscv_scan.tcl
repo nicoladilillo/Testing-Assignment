@@ -55,6 +55,6 @@ add_faults -all
 set_patterns -internal
 run_atpg -auto_compression 
 
-write_patterns patterns.stil -internal -replace -format stil
+# write_patterns patterns.stil -internal -replace -format stil
 
 quit

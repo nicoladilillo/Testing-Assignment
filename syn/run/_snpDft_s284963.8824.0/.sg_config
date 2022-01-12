@@ -1,0 +1,15 @@
+-dftc_version R-2020.09-SP2
+-dft_dmx_fifo /home/s284963/riscv_testing_2021_zoix/syn/run/_snpDft_s284963.8824.0/.dmx.sg
+set_option v aaa.tlib
+read_file -type hdl riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800.v
+read_file -type sgdc auto_excluded_cells.sgdc
+
+-target untestable_logic x_blocking
+-top riscv_core_0_128_1_16_1_1_0_0_0_0_0_0_0_0_0_3_6_15_5_1a110800
+-verbose
+-target untestable_logic -max_test_points 100
+-target untestable_logic -test_points_per_scan_cell 8
+-test_points_per_scan_cell 1
+-enable_netlist
+-enable_clock_info
+read_file -type sgdc sg_design_param.sgdc
