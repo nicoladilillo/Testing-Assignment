@@ -50,10 +50,8 @@ set_testability_configuration \
 set_testability_configuration -target random_resistant
 set_testability_configuration -target x_blocking
 set_testability_configuration -target untestable_logic
-set_testability_configuration -target core_wrapper -reuse_threshold 100
+#set_testability_configuration -target core_wrapper -reuse_threshold 100
 
-#set_testability_configuration -target random_resistant -random_pattern_count 1000 -target_test_coverage 95 
-#-control_signal test_mode_tp
 
 set_scan_element false NangateOpenCellLibrary/DLH_X1
 
