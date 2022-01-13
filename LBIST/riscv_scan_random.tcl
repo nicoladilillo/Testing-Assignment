@@ -13,7 +13,6 @@ add_faults -all
 set_patterns -random 
 set_random_patterns -clock clk_i
 set_random_patterns -length 200000
-run_simulation 
 
 set_faults -model stuck
 add_faults -all
