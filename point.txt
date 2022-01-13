@@ -1,0 +1,1 @@
+c0 force_01 boot_addr_i[1]

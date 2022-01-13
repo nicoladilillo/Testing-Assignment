@@ -1,0 +1,662 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version M-2016.12 for linux64 - Nov 21, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+
+ ┌────────────────────────────────────────────────────────────────────────────┐ 
+ │                                                                            │ 
+ │               Provided by EUROPRACTICE DESIGN TOOLS service.               │ 
+ │                             (2016/17 Release)                              │ 
+ │                                                                            │ 
+ │ For details of additional EDA design tools, design flows, training         │ 
+ │ technical support please contact the Microelectronics Support Centre.      │ 
+ │                                                                            │ 
+ │                      Microelectronics Support Centre                       │ 
+ │                 Science and Technology Facilities Council                  │ 
+ │                       Rutherford Appleton Laboratory                       │ 
+ │                               Harwell Oxford                               │ 
+ │                                Oxfordshire                                 │ 
+ │                                 OX11 0QX                                   │ 
+ │                               United Kingdom                               │ 
+ │                                                                            │ 
+ │                              +44 12345 445327                              │ 
+ │                     MicroelectronicsCentre@stfc.ac.uk                      │ 
+ │                        wwww.europractice.stfc.ac.uk                        │ 
+ │                                                                            │ 
+ └────────────────────────────────────────────────────────────────────────────┘ 
+
+set ROOT_PATH                    ../..
+../..
+set RISCV_PATH              	$ROOT_PATH
+../..
+set FPUNEW                      $ROOT_PATH/tb/core/fpnew
+../../tb/core/fpnew
+set GATE_PATH			../standalone
+../standalone
+set LOG_PATH			../log
+../log
+set TECH NangateOpenCell
+NangateOpenCell
+set search_path [ join "$RISCV_PATH/rtl/include $search_path" ]
+../../rtl/include . /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/minpower/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/syn_ver /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/sim_ver
+set search_path [ join "/data/libraries/LIB065 $search_path" ]
+/data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/minpower/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/syn_ver /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/sim_ver
+set search_path [ join "/data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan $search_path" ]
+/data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/minpower/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/syn_ver /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/sim_ver
+set search_path [ join "/data/libraries/pdt2002 $search_path" ]
+/data/libraries/pdt2002 /data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/minpower/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/syn_ver /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/sim_ver
+set search_path [ join "../techlib/ $search_path" ]
+../techlib/ /data/libraries/pdt2002 /data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/minpower/syn /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/syn_ver /eda/synopsys/2016-17/RHELx86/SYN_2016.12/dw/sim_ver
+#set search_path [ join "[getenv 'SYNOPSYS'] $search_path" ]
+set synthetic_library dw_foundation.sldb
+dw_foundation.sldb
+source ../bin/$TECH.dc_setup_synthesis.tcl
+typical
+## if you want to use clock gating
+#set_clock_gating_style -sequential_cell latch -positive_edge_logic {and} -negative_edge_logic {or} -control_point before -control_signal scan_enable
+#analyze -format sverilog  -work work ${FPUNEW}/src/fpnew_pkg.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_core_package.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_defines.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_tracer_defines.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_macros.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_config.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_basic.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_div.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_apu_disp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_compressed_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_cs_registers.sv
+#analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_core.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_debug_unit.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_int_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_ex_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_regs.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_id_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_if_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_load_store_unit.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_mult.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_fetch_fifo.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_pmp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file_latch.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/register_file_test_wrap.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_tracer.sv
+#analyze -format sverilog  -work work cluster_clock_gating_nangate.sv
+#analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
+analyze -format verilog  -work work ${RISCV_PATH}/LBIST/lfsr.v
+Running PRESTO HDLC
+Compiling source file ../../LBIST/lfsr.v
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:56: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Loading db file '/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn/dw_foundation.sldb'
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/phase_shifter.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration PHASE_SHIFTER
+Compiling Architecture ARCH of PHASE_SHIFTER
+Warning:  ../../LBIST/phase_shifter.vhd:15: The architecture arch has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration LBIST
+Compiling Architecture BEH of LBIST
+Warning:  ../../LBIST/LBIST.vhd:27: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/MISR.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MISR
+Compiling Architecture BEH of MISR
+Warning:  ../../LBIST/MISR.vhd:21: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST_complete.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration LBIST_COMPLETE
+Compiling Architecture BEH of LBIST_COMPLETE
+Warning:  ../../LBIST/LBIST_complete.vhd:24: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+#PARAMETERS
+#set  N_EXT_PERF_COUNTERS   0
+#set  INSTR_RDATA_WIDTH    128
+#set  PULP_SECURE           1
+#set  N_PMP_ENTRIES        16
+#set  USE_PMP               1
+#set  PULP_CLUSTER          1
+#set  FPU                   0
+#set  Zfinx                 0
+#set  FP_DIVSQRT            0
+#set  SHARED_FP             0
+#set  SHARED_DSP_MULT       0
+#set  SHARED_INT_MULT       0
+#set  SHARED_INT_DIV        0
+#set  SHARED_FP_DIVSQRT     0
+#set  WAPUTYPE              0
+#set  APU_NARGS_CPU         3
+#set  APU_WOP_CPU           6
+#set  APU_NDSFLAGS_CPU     15
+#set  APU_NUSFLAGS_CPU      5
+#set  DM_HaltAddress       32'h1A110800
+#set  N_HWLP                 2
+#set  N_HWLP_BITS            1
+#set  APU                    0
+set TOPLEVEL		LBIST_complete
+LBIST_complete
+#set PARAMETERS "N_EXT_PERF_COUNTERS=${N_EXT_PERF_COUNTERS}, INSTR_RDATA_WIDTH=${INSTR_RDATA_WIDTH}, PULP_SECURE=${PULP_SECURE}, N_PMP_ENTRIES=${N_PMP_ENTRIES}, USE_PMP=${USE_PMP}, PULP_CLUSTER=${PULP_CLUSTER}, FPU=${FPU}, Zfinx=${Zfinx}, FP_DIVSQRT=${FP_DIVSQRT}, SHARED_FP=${SHARED_FP}, SHARED_DSP_MULT=${SHARED_DSP_MULT}, SHARED_INT_MULT=${SHARED_INT_MULT}, SHARED_INT_DIV=${SHARED_INT_DIV}, SHARED_FP_DIVSQRT=${SHARED_FP_DIVSQRT}, WAPUTYPE=${WAPUTYPE}, APU_NARGS_CPU=${APU_NARGS_CPU}, APU_WOP_CPU=${APU_WOP_CPU}, APU_NDSFLAGS_CPU=#${APU_NDSFLAGS_CPU}, APU_NUSFLAGS_CPU=${APU_NUSFLAGS_CPU}, DM_HaltAddress=${DM_HaltAddress}"
+elaborate $TOPLEVEL -work work
+Loading db file '/eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../../LBIST/LBIST_complete.vhd:83: The initial value for signal 'lfsr_clock' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'LBIST_complete'.
+Information: Building the design 'lfsr' instantiated from design 'LBIST_complete' with
+	the parameters "N=32". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_N32 line 21 in file
+		'../../LBIST/lfsr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      r_reg_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=32,SCAN_CHAIN_number=190". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Statistics for case statements in always block at line 79 in file
+	'../../LBIST/LBIST.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            81            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 112 in file
+	'../../LBIST/LBIST.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           114            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine LBIST_SEED_dimension32_SCAN_CHAIN_number190 line 59 in file
+		'../../LBIST/LBIST.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CNT_CLK_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LBIST_SEED_dimension32_SCAN_CHAIN_number190 line 79 in file
+		'../../LBIST/LBIST.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     GO_NOGO_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    DUT_reset_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     FINISH_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   LFSR_reset_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   seed_index_reg    | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|    CNT_LOOP_reg     | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|      seed_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|   START_LOOP_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   TEST_en_i_s_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine LBIST_SEED_dimension32_SCAN_CHAIN_number190 line 112 in file
+		'../../LBIST/LBIST.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   next_state_reg    | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'MISR' instantiated from design 'LBIST_complete' with
+	the parameters "NBIT=32". (HDL-193)
+Warning:  ../../LBIST/MISR.vhd:23: The initial value for signal 'END_MISR' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/MISR.vhd:24: The initial value for signal 'CNT' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/MISR.vhd:75: Net 'END_MISR' or a directly connected net is driven by more than one process or block. (ELAB-365)
+
+Inferred memory devices in process
+	in routine MISR_NBIT32 line 28 in file
+		'../../LBIST/MISR.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    END_MISR_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       CNT_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    Golden_D_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MISR_NBIT32 line 75 in file
+		'../../LBIST/MISR.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    END_MISR_reg2    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine MISR_NBIT32 line 81 in file
+		'../../LBIST/MISR.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    END_MISR_reg3    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    PASS_Fail_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+1
+#elaborate $TOPLEVEL -work work -parameters $PARAMETERS
+link
+
+  Linking design 'LBIST_complete'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  NangateOpenCellLibrary (library) /home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db
+  dw_foundation.sldb (library) /eda/synopsys/2016-17/RHELx86/SYN_2016.12/libraries/syn/dw_foundation.sldb
+
+1
+uniquify
+1
+check_design 
+ 
+****************************************
+check_design summary:
+Version:     M-2016.12
+Date:        Sun Jan  9 05:32:18 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      3
+    Unconnected ports (LINT-28)                                     3
+
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+
+Nets                                                                1
+    Net type is unknown (LINT-38)                                   1
+
+Tristate                                                           32
+    A tristate bus has a non tri-state driver (LINT-34)            32
+--------------------------------------------------------------------------------
+
+Warning: In design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190', cell 'C715' does not drive any nets. (LINT-1)
+Warning: In design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190', cell 'C740' does not drive any nets. (LINT-1)
+Warning: In design 'MISR_NBIT32', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'phase_shifter_N32', port 'data_out[32]' is not connected to any nets. (LINT-28)
+Warning: In design 'phase_shifter_N32', port 'data_out[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190', port 'TEST_NORMAL' is not connected to any nets. (LINT-28)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[0]' has non three-state driver 'MISR_map/Golden_D_reg[0]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[1]' has non three-state driver 'MISR_map/Golden_D_reg[1]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[2]' has non three-state driver 'MISR_map/Golden_D_reg[2]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[3]' has non three-state driver 'MISR_map/Golden_D_reg[3]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[4]' has non three-state driver 'MISR_map/Golden_D_reg[4]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[5]' has non three-state driver 'MISR_map/Golden_D_reg[5]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[6]' has non three-state driver 'MISR_map/Golden_D_reg[6]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[7]' has non three-state driver 'MISR_map/Golden_D_reg[7]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[8]' has non three-state driver 'MISR_map/Golden_D_reg[8]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[9]' has non three-state driver 'MISR_map/Golden_D_reg[9]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[10]' has non three-state driver 'MISR_map/Golden_D_reg[10]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[11]' has non three-state driver 'MISR_map/Golden_D_reg[11]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[12]' has non three-state driver 'MISR_map/Golden_D_reg[12]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[13]' has non three-state driver 'MISR_map/Golden_D_reg[13]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[14]' has non three-state driver 'MISR_map/Golden_D_reg[14]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[15]' has non three-state driver 'MISR_map/Golden_D_reg[15]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[16]' has non three-state driver 'MISR_map/Golden_D_reg[16]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[17]' has non three-state driver 'MISR_map/Golden_D_reg[17]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[18]' has non three-state driver 'MISR_map/Golden_D_reg[18]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[19]' has non three-state driver 'MISR_map/Golden_D_reg[19]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[20]' has non three-state driver 'MISR_map/Golden_D_reg[20]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[21]' has non three-state driver 'MISR_map/Golden_D_reg[21]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[22]' has non three-state driver 'MISR_map/Golden_D_reg[22]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[23]' has non three-state driver 'MISR_map/Golden_D_reg[23]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[24]' has non three-state driver 'MISR_map/Golden_D_reg[24]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[25]' has non three-state driver 'MISR_map/Golden_D_reg[25]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[26]' has non three-state driver 'MISR_map/Golden_D_reg[26]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[27]' has non three-state driver 'MISR_map/Golden_D_reg[27]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[28]' has non three-state driver 'MISR_map/Golden_D_reg[28]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[29]' has non three-state driver 'MISR_map/Golden_D_reg[29]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[30]' has non three-state driver 'MISR_map/Golden_D_reg[30]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', three-state bus 'Golden_D[31]' has non three-state driver 'MISR_map/Golden_D_reg[31]/Q'. (LINT-34)
+Warning: In design 'LBIST_complete', net 'MISR_map/END_MISR' has multiple drivers (unknown wired-logic type). (LINT-38)
+1
+#set_multicycle_path 2 -setup -through [get_pins id_stage_i/registers_i/riscv_register_file_i/mem_reg*/Q]
+#set_multicycle_path 1 -hold  -through [get_pins id_stage_i/registers_i/riscv_register_file_i/mem_reg*/Q]
+set CLOCK_SPEED 2
+2
+create_clock      [get_ports CLK] -period $CLOCK_SPEED -name REF_CLK
+1
+set_ideal_network [get_ports CLK]
+1
+#set core_outputs [all_outputs]
+#set core_inputs  [remove_from_collection [all_inputs] [get_ports CLK]]
+#set core_inputs  [remove_from_collection $core_inputs [get_ports RST]]
+#set INPUT_DELAY  [expr 0.4*$CLOCK_SPEED]
+#set OUTPUT_DELAY [expr 0.4*$CLOCK_SPEED]
+#set_input_delay  $INPUT_DELAY  $core_inputs  -clock [get_clock]
+#set_output_delay $OUTPUT_DELAY [all_outputs] -clock [get_clock]
+#set_ideal_network       -no_propagate    [all_connected  [get_ports rst_ni]]
+#set_ideal_network       -no_propagate    [get_nets rst_ni]
+#set_dont_touch_network  -no_propagate    [get_ports rst_ni]
+#set_multicycle_path 2   -from            [get_ports   rst_ni]
+# If you want to set some pins to a fixed value
+#set_case_analysis   0                    [get_ports test_en_i]
+#set_case_analysis   1                    [get_ports clock_en_i]
+#set_operating_conditions $OPER_COND
+#compile_ultra -gate_clock -no_autoungroup
+compile_ultra -no_autoungroup
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | M-2016.12-DWBB_201612.0 |     *     |
+| Licensed DW Building Blocks        | M-2016.12-DWBB_201612.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 40 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'LBIST_complete'
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical_ccs_scan.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'LBIST_SEED_dimension32_SCAN_CHAIN_number190'
+Information: Added key list 'DesignWare' to design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190'. (DDB-72)
+Information: In design 'LBIST_SEED_dimension32_SCAN_CHAIN_number190', the register 'TEST_en_i_s_reg' is removed because it is merged to 'START_LOOP_reg'. (OPT-1215)
+ Implement Synthetic for 'LBIST_SEED_dimension32_SCAN_CHAIN_number190'.
+  Processing 'MISR_NBIT32'
+Warning: Unable to determine wired-logic type for multiple-driver net 'END_MISR'. (TRANS-5)
+Information: Assuming multiple-driver net 'END_MISR' is a wired-AND. (TRANS-6)
+Information: The register 'END_MISR_reg2' is a constant and will be removed. (OPT-1206)
+Information: The register 'END_MISR_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'PASS_Fail_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'END_MISR_reg3' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[31]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[30]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[29]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[28]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[27]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[26]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[25]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[24]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[23]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[22]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[21]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[20]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[19]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[18]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[17]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[16]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[15]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[14]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[13]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[12]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[11]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[10]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[9]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[8]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[7]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[6]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[5]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[4]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[3]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[2]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[1]' will be removed. (OPT-1207)
+Information: The register 'CNT_reg[0]' will be removed. (OPT-1207)
+  Processing 'LBIST_complete'
+  Processing 'lfsr_N32'
+  Processing 'phase_shifter_N32'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Selecting critical implementations
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:33    1321.8      0.20       0.5       0.0                           25788.0938
+    0:00:34    1361.7      0.00       0.0       0.0                           27393.0391
+    0:00:34    1361.7      0.00       0.0       0.0                           27393.0391
+    0:00:34    1361.7      0.00       0.0       0.0                           27393.0391
+Information: The register 'BIST/GO_NOGO_reg' is a constant and will be removed. (OPT-1206)
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:37    1335.9      0.00       0.0       0.0                           26547.9219
+    0:00:37    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:38    1326.3      0.00       0.0       0.0                           26177.0684
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:39    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:40    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:41    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:41    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:41    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:41    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:42    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:42    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:42    1313.2      0.00       0.0       0.0                           25537.6895
+    0:00:42    1313.2      0.00       0.0       0.0                           25537.6895
+Loading db file '/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+change_names -hierarchy -rules verilog
+1
+write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}.v"
+Writing verilog file '/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/standalone/LBIST_complete.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write -hierarchy -format ddc -output "${GATE_PATH}/${TOPLEVEL}.ddc"
+Writing ddc file '../standalone/LBIST_complete.ddc'.
+1
+write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/s290766/Desktop/Assignment/riscv_testing_2021_zoix/syn/standalone/LBIST_complete.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write_sdc "${GATE_PATH}/${TOPLEVEL}.sdc"
+1
+# write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
+write_tmax_library -path "${GATE_PATH}"
+Current library: NangateOpenCellLibrary:
+Warning: Cannot convert FILLCELL_X32 to tlib format.
+Warning: Cannot convert FILLCELL_X16 to tlib format.
+Warning: Cannot convert FILLCELL_X8 to tlib format.
+Warning: Cannot convert FILLCELL_X4 to tlib format.
+Warning: Cannot convert FILLCELL_X2 to tlib format.
+Warning: Cannot convert FILLCELL_X1 to tlib format.
+Warning: Cannot convert ANTENNA_X1 to tlib format.
+Information: Wrote out tmax lib file(s)1
+report_area > area_LBIST_only.txt
+#quit
+dc_shell> 

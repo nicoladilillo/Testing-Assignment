@@ -1,0 +1,24 @@
+ # this simulation has lasted about 7 days and here 5 seed has been changed and for each 
+ # 200 test vector has been loaded. The biggest scan chain was long 190 FF. With new tstpoint
+ # in riscv_core and with more accurate simulation a bigger coverage will be achive.
+ 
+    Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT     121230
+ Possibly detected                PT       4932
+ Undetectable                     UD        623
+ ATPG untestable                  AU          0
+ Not detected                     ND     177843
+ -----------------------------------------------
+ total faults                            304628
+ test coverage                            40.69%
+ fault coverage                           40.61%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ #external patterns (run/riscv_core_dumpports.vcd) 249999
+     #full_sequential patterns           249999
+ -----------------------------------------------
