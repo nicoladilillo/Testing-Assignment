@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_textio.all;
 
+library std;
+use std.textio.all;
+
 entity LBIST_part_testbench is
 end LBIST_part_testbench;
 
@@ -291,10 +294,18 @@ begin
 	begin
 		rst_i <= '0'; rst <= '1'; start_s <= '1';
 		wait for clock_t*3;		
-		rst_i <= '1'; rst <= '0'; start_s <= '1';
+		rst_i <= '1'; rst <= '0'; start_s <= '0';
 		wait;			
 	end process;
 
-    
+    MISR_golden_value_detector: process(go_nogo)
+        file res_fp : text open WRITE_MODE is "./golden_value.txt";
+        variable line_out : line;    
+    begin
+        if (go_nogo = '1') then
+            hwrite(line_out, Golden_D);
+            writeline(res_fp, line_out);
+        end if;
+    end process;
 
 end tb;

@@ -10,7 +10,7 @@ entity LBIST is
 		LOOP_for_SEED    : integer := 200;
 		SCAN_CHAIN_number: integer := 204;
 		MISR_size		 : integer := 16;
-		MISR_value_gold  : integer := 0
+		MISR_value_gold  : integer := 13984
 	);
 	port(
 		CLK: IN std_logic;
@@ -39,6 +39,7 @@ architecture beh of LBIST is
 		SCAN_Propagation_state_0,
 		SCAN_Propagation_state,
 		SCAN_normal,
+		END_SCAN_state_0,
 		END_SCAN_state_1, 
 		END_SCAN_state_2,
 		END_good);
@@ -137,7 +138,7 @@ FSM: process (current_state, cnt_loop, Cnt_seed, Cnt_loop_for_seed, start, seed_
 				Cnt_loop_next <= (others => '0');
 				-- check if seeds are finished
 				if (Cnt_seed = SEED_number - 1) then
-					Next_state <= END_SCAN_state_1;
+					Next_state <= END_SCAN_state_0;
 				else
 					Next_state <= SCAN_Propagation_state_0;
 				end if;
@@ -167,6 +168,16 @@ FSM: process (current_state, cnt_loop, Cnt_seed, Cnt_loop_for_seed, start, seed_
 					Next_state <= SEED_injection_state;
 				else
 					Next_state <= SCAN_propagation_state;
+				end if;
+
+			-- end the bist, start check the result
+			when END_SCAN_state_0 => -- Contiunuos to load the MISR with previous valuee loaded in scan chains
+				MISR_en <= '1';
+				Cnt_loop_next <= Cnt_loop + 1;
+				if (Cnt_loop = SCAN_CHAIN_number - 2) then
+					Next_state <= END_SCAN_state_1;
+				else
+					Next_state <= END_SCAN_state_0;
 				end if;
 
 			-- end the bist, start check the result

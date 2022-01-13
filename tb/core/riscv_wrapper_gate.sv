@@ -84,7 +84,7 @@ module riscv_wrapper
          .LOOP_for_SEED(200),
          .SCAN_CHAIN_number(24),
          .MISR_size(16),
-         .MISR_value_gold(0),
+         .MISR_value_gold(13984),
          .SCAN_CHAIN(16),
          .DIMENSION(24))
     LBIST_procedure
