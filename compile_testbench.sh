@@ -16,11 +16,12 @@ cd ${run_dir}
 
 vlib work_gate
 vlog -work work_gate +define+functional ${root_dir}/gate/NangateOpenCellLibrary.v
-vcom -work work_gate ${root_dir}/LBIST/phase_shifter.vhd 
-vcom -work work_gate ${root_dir}/LBIST/MISR.vhd
-vcom -work work_gate ${root_dir}/LBIST/BIST_controller.vhd
-vcom -work work_gate ${root_dir}/LBIST/LBIST_complete.vhd
+vcom -work work_gate ${root_dir}/LBIST/phase_shifter.vhd \
+	${root_dir}/LBIST/MISR.vhd \
+	${root_dir}/LBIST/BIST_controller.vhd \
+ 	${root_dir}/LBIST/LBIST_complete.vhd
 vlog -sv -work work_gate -cover t -novopt -timescale "1 ns/ 1 ps"  -suppress 2577 -suppress 2583  \
+	${root_dir}/LBIST/lfsr.v \
 	${root_dir}/syn/output/riscv_core_scan.v \
 	${root_dir}/rtl/include/riscv_config.sv \
 	${root_dir}/tb/core/fpnew/src/fpnew_pkg.sv \

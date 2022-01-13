@@ -44,7 +44,7 @@ module tb_top
     logic [31:0]            exit_value;
 
     // signals for LBIST
-    logic                   start_s = 'b0;
+    logic                   start_s = 1'b1;
     logic                   go_nogo_s;
 
     // signals for ri5cy
@@ -67,6 +67,36 @@ module tb_top
         automatic string firmware;
         automatic int prog_size = 6;
 
+        // MODIFY: before start with LBIST procedure
+        $display("START LBIST");
+        @(posedge rst_n);
+        @(posedge clk);
+        @(posedge clk);
+        // wait until finish of LBIST
+        @(posedge go_nogo_s);
+        start_s = 1'b0;
+        @(posedge clk);
+        @(posedge clk);
+        if(go_nogo_s) begin
+            $display("LBIST procedure pass");
+        end else begin
+            $display("LBIST procedure NOT pass");
+        end
+
+        // before reset riscv again
+        rst_n          = 1'b0;
+
+        // wait a few cycles
+        repeat (RESET_WAIT_CYCLES) begin
+            @(posedge clk); //TODO: was posedge, see below
+        end
+
+        // start running
+        #RESET_DEL rst_n = 1'b1;
+        if($test$plusargs("verbose"))
+            $display("reset deasserted again", $time);
+
+        $display("START LOAD FIRMWARE");
         if($value$plusargs("firmware=%s", firmware)) begin
             if($test$plusargs("verbose"))
                 $display("[TESTBENCH] %t: loading firmware %0s ...",
@@ -147,7 +177,9 @@ module tb_top
 	//if (tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_we_ex_i == 1'h1) begin
 	if (tb_top.riscv_wrapper_i.data_req == 1'h1 && tb_top.riscv_wrapper_i.data_we == 1'h1) begin
 	  if (tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o < 32'h200000 || tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o > 32'h240000) begin
-		  $display("MEMORY MAP WARNING: Writing OUTSIDE DRAM at address %h, time %t", tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o, $realtime); 
+          if(start_s == 0) begin
+		    $display("MEMORY MAP WARNING: Writing OUTSIDE DRAM at address %h, time %t", tb_top.riscv_wrapper_i.riscv_core_i.load_store_unit_i.data_addr_o, $realtime); 
+          end
 	  end 
 	end
     end
@@ -162,7 +194,7 @@ module tb_top
     riscv_wrapper_i
         (.clk_i          ( clk          ),
          .rst_ni         ( rst_n        ),
-         .start          ( starts_s     ),
+         .start          ( start_s     ),
          .go_nogo        ( go_nogo_s    ),  
          .fetch_enable_i ( fetch_enable ),
          .tests_passed_o ( tests_passed ),

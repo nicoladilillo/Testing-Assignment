@@ -69,13 +69,15 @@ module riscv_wrapper
     logic                         test_en_i;
     logic                         test_mode;
     logic                         lbist_en;
+    // clock for gating memory according LBIST
+    logic                         clk_i_gate;
 
-    // assignment
+    // continuos assignment
     assign dut_out[6] = data_we;
     assign dut_out[7] = irq_id_out[4];
     assign clk = ~clk_i;
     assign rst = ~rst_ni;
-
+    assign clk_i_gate = clk_i && (~test_mode);
     // instantiate the LBIST
     LBIST_complete
       #(
@@ -91,7 +93,7 @@ module riscv_wrapper
         (
           .CLK                   (clk                    ),
           .RST                   (rst                    ),
-          .GO_NOGI               (go_nogo                ),
+          .GO_NOGO               (go_nogo                ),
           .LFSR_OUT              (lfsr_out               ),
           .DUT_OUT               (dut_out                ),
           .START                 (start                  ),
@@ -194,7 +196,7 @@ module riscv_wrapper
         #(.RAM_ADDR_WIDTH (RAM_ADDR_WIDTH),
           .INSTR_RDATA_WIDTH (INSTR_RDATA_WIDTH))
     ram_i
-        (.clk_i          ( clk_i                          ),
+        (.clk_i          ( clk_i_gate                     ),
          .rst_ni         ( rst_ni                         ),
 
          .instr_req_i    ( instr_req                      ),
