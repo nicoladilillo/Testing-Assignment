@@ -10,7 +10,7 @@ entity LBIST is
 		LOOP_for_SEED    : integer := 200;
 		SCAN_CHAIN_number: integer := 204;
 		MISR_size		 : integer := 16;
-		MISR_value_gold  : integer := 13984
+		MISR_value_gold  : integer := 26815
 	);
 	port(
 		CLK: IN std_logic;

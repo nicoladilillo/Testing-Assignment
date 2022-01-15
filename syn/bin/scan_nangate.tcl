@@ -72,7 +72,7 @@ change_names -rules verilog -hierarchy
 
 report_scan_path -test_mode all
 
-report_area
+report_area > area_scan.txt
 
 write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan.v"
 write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan.sdf"

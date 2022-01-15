@@ -53,7 +53,7 @@ architecture tb of LBIST_complete_testbench is
 			LOOP_for_SEED    : integer := 200;
 			SCAN_CHAIN_number: integer := 204; -- lengh of biggest scan chain
 			MISR_size		 : integer := 32;
-			MISR_value_gold  : integer := 0;
+			MISR_value_gold  : integer := 26815;
 			SCAN_CHAIN		 : integer := 16; -- number of scan chain
 			DIMENSION		 : integer := 24
 		);
@@ -109,7 +109,7 @@ begin
 			LOOP_for_SEED    => 200,
 			SCAN_CHAIN_number=> 204,
 			MISR_size		 => 16,
-			MISR_value_gold  => 0,
+			MISR_value_gold  => 26815,
 			SCAN_CHAIN		 => 16,
 			DIMENSION		 => 24
 		)

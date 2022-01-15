@@ -78,7 +78,8 @@ module riscv_wrapper
     assign clk = ~clk_i;
     assign rst = ~rst_ni;
     assign clk_i_gate = clk_i && (~test_mode);
-    // instantiate the LBIST
+    
+	// instantiate the LBIST
     LBIST_complete
       #(
          .SEED_dimension(25),
@@ -86,7 +87,7 @@ module riscv_wrapper
          .LOOP_for_SEED(200),
          .SCAN_CHAIN_number(24),
          .MISR_size(16),
-         .MISR_value_gold(13984),
+         .MISR_value_gold(26815),
          .SCAN_CHAIN(16),
          .DIMENSION(24))
     LBIST_procedure

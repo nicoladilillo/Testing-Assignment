@@ -25,5 +25,7 @@ export RUN_GATE=1
 
 cd ${run_dir}
 
-vsim -c -work work_gate tb_top_vopt "+firmware=${program}" +dumpports+nocollapse +verbose -suppress 3015 -do ${root_dir}/vsim.tcl
+vsim -c -work work_gate tb_top_vopt "+firmware=${program}" +dumpports+nocollapse -suppress 3015 -do ${root_dir}/vsim.tcl
+# FOR MORE VERBOSE EXECUTION
+# vsim -c -work work_gate tb_top_vopt "+firmware=${program}" +dumpports+nocollapse +verbose -suppress 3015 -do ${root_dir}/vsim.tcl
 

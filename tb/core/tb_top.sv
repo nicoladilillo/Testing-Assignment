@@ -76,6 +76,13 @@ module tb_top
         @(posedge go_nogo_s);
         start_s = 1'b0;
         @(posedge clk);
+        if(go_nogo_s) begin
+            $display("LBIST procedure pass");
+        end else begin
+            $display("LBIST procedure NOT pass");
+        end
+        @(posedge go_nogo_s);
+        start_s = 1'b0;
         @(posedge clk);
         if(go_nogo_s) begin
             $display("LBIST procedure pass");

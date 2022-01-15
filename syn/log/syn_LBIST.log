@@ -1,0 +1,602 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version R-2020.09-SP2 for linux64 - Dec 03, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set ROOT_PATH                    ../..
+../..
+set RISCV_PATH              	$ROOT_PATH
+../..
+set FPUNEW                      $ROOT_PATH/tb/core/fpnew
+../../tb/core/fpnew
+set GATE_PATH			../standalone
+../standalone
+set LOG_PATH			../log
+../log
+set TECH NangateOpenCell
+NangateOpenCell
+set search_path [ join "$RISCV_PATH/rtl/include $search_path" ]
+../../rtl/include . /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/syn_ver /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/sim_ver
+set search_path [ join "/data/libraries/LIB065 $search_path" ]
+/data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/syn_ver /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/sim_ver
+set search_path [ join "/data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan $search_path" ]
+/data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/syn_ver /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/sim_ver
+set search_path [ join "/data/libraries/pdt2002 $search_path" ]
+/data/libraries/pdt2002 /data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/syn_ver /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/sim_ver
+set search_path [ join "../techlib/ $search_path" ]
+../techlib/ /data/libraries/pdt2002 /data/libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/fix_scan /data/libraries/LIB065 ../../rtl/include . /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/syn_ver /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/dw/sim_ver
+#set search_path [ join "[getenv 'SYNOPSYS'] $search_path" ]
+set synthetic_library dw_foundation.sldb
+dw_foundation.sldb
+source ../bin/$TECH.dc_setup_synthesis.tcl
+typical
+## if you want to use clock gating
+#set_clock_gating_style -sequential_cell latch -positive_edge_logic {and} -negative_edge_logic {or} -control_point before -control_signal scan_enable
+#analyze -format sverilog  -work work ${FPUNEW}/src/fpnew_pkg.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_core_package.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_defines.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_tracer_defines.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/apu_macros.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/include/riscv_config.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_basic.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_alu_div.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_apu_disp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_compressed_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_cs_registers.sv
+#analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_core.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_debug_unit.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_decoder.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_int_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_ex_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_controller.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_hwloop_regs.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_id_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_if_stage.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_load_store_unit.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_mult.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_prefetch_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_fetch_fifo.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_L0_buffer.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_pmp.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_register_file_latch.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/register_file_test_wrap.sv
+#analyze -format sverilog  -work work ${RISCV_PATH}/rtl/riscv_tracer.sv
+#analyze -format sverilog  -work work cluster_clock_gating_nangate.sv
+#analyze -format verilog  -work work ${RISCV_PATH}/syn/output/riscv_core_scan32.v
+analyze -format verilog  -work work ${RISCV_PATH}/LBIST/lfsr.v
+Running PRESTO HDLC
+Compiling source file ../../LBIST/lfsr.v
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:30: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  ../../LBIST/lfsr.v:56: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Loading db file '/home/s284963/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn/dw_foundation.sldb'
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/phase_shifter.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration PHASE_SHIFTER
+Compiling Architecture ARCH of PHASE_SHIFTER
+Warning:  ../../LBIST/phase_shifter.vhd:15: The architecture arch has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration LBIST
+Compiling Architecture BEH of LBIST
+Warning:  ../../LBIST/LBIST.vhd:27: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/MISR.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MISR
+Compiling Architecture BEH of MISR
+Warning:  ../../LBIST/MISR.vhd:20: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl  -work work ${RISCV_PATH}/LBIST/LBIST_complete.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration LBIST_COMPLETE
+Compiling Architecture BEH of LBIST_COMPLETE
+Warning:  ../../LBIST/LBIST_complete.vhd:32: The architecture beh has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+#PARAMETERS
+#set  N_EXT_PERF_COUNTERS   0
+#set  INSTR_RDATA_WIDTH    128
+#set  PULP_SECURE           1
+#set  N_PMP_ENTRIES        16
+#set  USE_PMP               1
+#set  PULP_CLUSTER          1
+#set  FPU                   0
+#set  Zfinx                 0
+#set  FP_DIVSQRT            0
+#set  SHARED_FP             0
+#set  SHARED_DSP_MULT       0
+#set  SHARED_INT_MULT       0
+#set  SHARED_INT_DIV        0
+#set  SHARED_FP_DIVSQRT     0
+#set  WAPUTYPE              0
+#set  APU_NARGS_CPU         3
+#set  APU_WOP_CPU           6
+#set  APU_NDSFLAGS_CPU     15
+#set  APU_NUSFLAGS_CPU      5
+#set  DM_HaltAddress       32'h1A110800
+#set  N_HWLP                 2
+#set  N_HWLP_BITS            1
+#set  APU                    0
+set TOPLEVEL		LBIST_complete
+LBIST_complete
+#set PARAMETERS "N_EXT_PERF_COUNTERS=${N_EXT_PERF_COUNTERS}, INSTR_RDATA_WIDTH=${INSTR_RDATA_WIDTH}, PULP_SECURE=${PULP_SECURE}, N_PMP_ENTRIES=${N_PMP_ENTRIES}, USE_PMP=${USE_PMP}, PULP_CLUSTER=${PULP_CLUSTER}, FPU=${FPU}, Zfinx=${Zfinx}, FP_DIVSQRT=${FP_DIVSQRT}, SHARED_FP=${SHARED_FP}, SHARED_DSP_MULT=${SHARED_DSP_MULT}, SHARED_INT_MULT=${SHARED_INT_MULT}, SHARED_INT_DIV=${SHARED_INT_DIV}, SHARED_FP_DIVSQRT=${SHARED_FP_DIVSQRT}, WAPUTYPE=${WAPUTYPE}, APU_NARGS_CPU=${APU_NARGS_CPU}, APU_WOP_CPU=${APU_WOP_CPU}, APU_NDSFLAGS_CPU=#${APU_NDSFLAGS_CPU}, APU_NUSFLAGS_CPU=${APU_NUSFLAGS_CPU}, DM_HaltAddress=${DM_HaltAddress}"
+elaborate $TOPLEVEL -work work
+Loading db file '/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (LBIST_complete)
+Elaborated 1 design.
+Current design is now 'LBIST_complete'.
+Information: Building the design 'lfsr' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+
+Inferred memory devices in process
+	in routine lfsr_N24 line 21 in file
+		'../../LBIST/lfsr.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      r_reg_reg      | Flip-flop |  25   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (lfsr_N24)
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Information: Building the design 'MISR'. (HDL-193)
+
+Inferred memory devices in process
+	in routine MISR line 28 in file
+		'../../LBIST/MISR.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Golden_D_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (MISR)
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+#elaborate $TOPLEVEL -work work -parameters $PARAMETERS
+link
+
+  Linking design 'LBIST_complete'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  NangateOpenCellLibrary (library) /home/s284963/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db
+  dw_foundation.sldb (library) /eda/synopsys/2020-21/RHELx86/SYN_2020.09-SP2/libraries/syn/dw_foundation.sldb
+
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+0
+uniquify
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+check_design 
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+#set_multicycle_path 2 -setup -through [get_pins id_stage_i/registers_i/riscv_register_file_i/mem_reg*/Q]
+#set_multicycle_path 1 -hold  -through [get_pins id_stage_i/registers_i/riscv_register_file_i/mem_reg*/Q]
+set CLOCK_SPEED 2
+2
+create_clock      [get_ports CLK] -period $CLOCK_SPEED -name REF_CLK
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_ideal_network [get_ports CLK]
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+#set core_outputs [all_outputs]
+#set core_inputs  [remove_from_collection [all_inputs] [get_ports CLK]]
+#set core_inputs  [remove_from_collection $core_inputs [get_ports RST]]
+#set INPUT_DELAY  [expr 0.4*$CLOCK_SPEED]
+#set OUTPUT_DELAY [expr 0.4*$CLOCK_SPEED]
+#set_input_delay  $INPUT_DELAY  $core_inputs  -clock [get_clock]
+#set_output_delay $OUTPUT_DELAY [all_outputs] -clock [get_clock]
+#set_ideal_network       -no_propagate    [all_connected  [get_ports rst_ni]]
+#set_ideal_network       -no_propagate    [get_nets rst_ni]
+#set_dont_touch_network  -no_propagate    [get_ports rst_ni]
+#set_multicycle_path 2   -from            [get_ports   rst_ni]
+# If you want to set some pins to a fixed value
+#set_case_analysis   0                    [get_ports test_en_i]
+#set_case_analysis   1                    [get_ports clock_en_i]
+#set_operating_conditions $OPER_COND
+#compile_ultra -gate_clock -no_autoungroup
+compile_ultra -no_autoungroup
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | R-2020.09-DWBB_202009.2 |     *     |
+| Licensed DW Building Blocks        | R-2020.09-DWBB_202009.2 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+  Simplifying Design 'LBIST_complete'
+
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical_ccs_scan.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'MISR'
+  Processing 'lfsr_N24'
+  Processing 'LBIST_complete'
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06     479.9      0.00       0.0       0.0                           13120.4277
+    0:00:06     479.9      0.00       0.0       0.0                           13120.4277
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+    0:00:07     352.4      0.00       0.0       0.0                           6626.9419
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:07     352.2      0.00       0.0       0.0                           6603.9810
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+Begin Combinational loops breaking ...
+	Number of combinational loops found: 0
+End Combinational loops breaking ...
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+    0:00:08     352.2      0.00       0.0       0.0                           6603.9810
+Loading db file '/home/s284963/riscv_testing_2021_zoix/syn/techlib/NangateOpenCellLibrary_typical_ccs_scan.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+change_names -hierarchy -rules verilog
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Error:  ../../LBIST/phase_shifter.vhd:29: Net 'data_out[22]', or a directly connected net, is driven by more than one source, and at least one source is a constant net. (ELAB-368)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'phase_shifter' instantiated from design 'LBIST_complete' with
+	the parameters "N=24". (HDL-193)
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning:  ../../LBIST/LBIST.vhd:31: The initial value for signal 'CNT_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:32: The initial value for signal 'CNT_CLK' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../../LBIST/LBIST.vhd:36: The initial value for signal 'START_LOOP' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Error:  SEED_number is not a parameter in module LBIST (VER-216)
+Error:  LOOP_for_SEED is not a parameter in module LBIST (VER-216)
+Error:  MISR_size is not a parameter in module LBIST (VER-216)
+Error:  MISR_value_gold is not a parameter in module LBIST (VER-216)
+*** Presto compilation terminated with 4 errors. ***
+Information: Building the design 'LBIST' instantiated from design 'LBIST_complete' with
+	the parameters "SEED_dimension=25,SEED_number=10,LOOP_for_SEED=200,SCAN_CHAIN_number=204,MISR_size=16,MISR_value_gold=26815". (HDL-193)
+Warning: Unable to resolve reference 'phase_shifter' in 'LBIST_complete'. (LINK-5)
+Warning: Unable to resolve reference 'LBIST' in 'LBIST_complete'. (LINK-5)
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}.v"
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/s284963/riscv_testing_2021_zoix/syn/standalone/LBIST_complete.v'.
+1
+write -hierarchy -format ddc -output "${GATE_PATH}/${TOPLEVEL}.ddc"
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file '../standalone/LBIST_complete.ddc'.
+1
+write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}.sdf"
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/s284963/riscv_testing_2021_zoix/syn/standalone/LBIST_complete.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
+1
+write_sdc "${GATE_PATH}/${TOPLEVEL}.sdc"
+Warning: Design 'LBIST_complete' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# write_test_protocol -output "${GATE_PATH}/${TOPLEVEL}.spf"
+write_tmax_library -path "${GATE_PATH}"
+Current library: NangateOpenCellLibrary:
+Warning: Cannot convert FILLCELL_X32 to tlib format.
+Warning: Cannot convert FILLCELL_X16 to tlib format.
+Warning: Cannot convert FILLCELL_X8 to tlib format.
+Warning: Cannot convert FILLCELL_X4 to tlib format.
+Warning: Cannot convert FILLCELL_X2 to tlib format.
+Warning: Cannot convert FILLCELL_X1 to tlib format.
+Warning: Cannot convert ANTENNA_X1 to tlib format.
+Information: Wrote out tmax lib file(s)1
+report_area > area_LBIST_only.txt
+#quit
+dc_shell> 

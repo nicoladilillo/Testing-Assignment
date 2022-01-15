@@ -138,4 +138,4 @@ write_sdc "${GATE_PATH}/${TOPLEVEL}.sdc"
 write_tmax_library -path "${GATE_PATH}"
 report_area > area_LBIST_only.txt
 
-#quit
+quit

@@ -10,7 +10,7 @@ entity LBIST_complete is
 		LOOP_for_SEED    : integer := 200;
 		SCAN_CHAIN_number: integer := 204; -- lengh of biggest scan chain
 		MISR_size		 : integer := 16;
-		MISR_value_gold  : integer := 0;
+		MISR_value_gold  : integer := 26815;
 		SCAN_CHAIN		 : integer := 16; -- number of scan chain
 		DIMENSION		 : integer := 24
 	);
@@ -55,7 +55,7 @@ architecture beh of LBIST_complete is
             LOOP_for_SEED    : integer := 200;
             SCAN_CHAIN_number: integer := 204;
             MISR_size		 : integer := 15;
-            MISR_value_gold  : integer := 0
+            MISR_value_gold  : integer := 26815
 	    );
 		port(
 			CLK: IN std_logic;
