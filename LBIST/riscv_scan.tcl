@@ -55,6 +55,8 @@ add_faults -all
 set_patterns -internal
 run_atpg -auto_compression 
 
-# write_patterns patterns.stil -internal -replace -format stil
+set_faults -fault_coverage
+report_summaries > report_summaries_ATPG.txt
+write_patterns patterns.stil -internal -replace -format stil
 
 quit

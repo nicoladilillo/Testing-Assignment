@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Run this screen for calculated the fault coverage in a sequentail way
+
 # Move to the run directory
 rm -rf run
 mkdir -p run
@@ -18,6 +20,6 @@ vcom ../LBIST_complete_testbench.vhd
 # Invoke QuestaSim shell and run the TCL script
 vsim -t ns -c -novopt work.LBIST_complete_testbench -do ../LBIST_testbench_script.tcl -wlf LBIST_sim.wlf
 
-# cd ..
-# tmax LBIST_fsim_script.tcl -shell
+cd ..
+tmax LBIST_fsim_script.tcl -shell
 

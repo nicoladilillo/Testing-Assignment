@@ -12,13 +12,13 @@ add_faults -all
 
 set_patterns -random 
 set_random_patterns -clock clk_i
-set_random_patterns -length 200000
+set_random_patterns -length 2000
 
 set_faults -model stuck
 add_faults -all
 run_fault_sim
 
 set_faults -fault_coverage
-report_summaries
+report_summaries > report_summaries_random.txt
 
 quit

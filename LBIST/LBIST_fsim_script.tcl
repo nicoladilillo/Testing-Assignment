@@ -56,6 +56,6 @@ add_faults -all
 run_fault_sim
 
 set_faults -fault_coverage
-report_summaries
+report_summaries > report_summaries_sequential.txt
 
 quit

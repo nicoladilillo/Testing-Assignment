@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP2 for linux64 -- Dec 03, 2020
-#@ # Date:   Thu Jan 13 21:43:04 2022
+#@ # Date:   Sat Jan 15 15:41:26 2022
 #@ # Run by: s284963@po.polito.it
 #@ 
 
@@ -6747,8 +6747,6 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ set_testability_configuration -target untestable_logic
 #@ #set_testability_configuration -target core_wrapper -reuse_threshold 100
 #@ 
-#@ #set_testability_configuration -target random_resistant -random_pattern_count 1000 -target_test_coverage 95 
-#@ #-control_signal test_mode_tp
 #@ 
 #@ set_scan_element false NangateOpenCellLibrary/DLH_X1
 #@ 
@@ -6769,7 +6767,7 @@ source -echo -verbose /home/s284963/riscv_testing_2021_zoix/syn/run/../bin/scan_
 #@ 
 #@ report_scan_path -test_mode all
 #@ 
-#@ report_area
+#@ report_area > area_scan.txt
 #@ 
 #@ write -hierarchy -format verilog -output "${GATE_PATH}/${TOPLEVEL}_scan.v"
 #@ write_sdf -version 3.0 "${GATE_PATH}/${TOPLEVEL}_scan.sdf"

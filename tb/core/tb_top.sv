@@ -72,17 +72,12 @@ module tb_top
         @(posedge rst_n);
         @(posedge clk);
         @(posedge clk);
-        // wait until finish of LBIST
+        // wait until finish of LBIST procedure
         @(posedge go_nogo_s);
         start_s = 1'b0;
+		// wait before to check if test is passed or not
         @(posedge clk);
-        if(go_nogo_s) begin
-            $display("LBIST procedure pass");
-        end else begin
-            $display("LBIST procedure NOT pass");
-        end
-        @(posedge go_nogo_s);
-        start_s = 1'b0;
+        @(posedge clk);
         @(posedge clk);
         if(go_nogo_s) begin
             $display("LBIST procedure pass");

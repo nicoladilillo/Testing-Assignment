@@ -66,4 +66,6 @@ add_faults -all
 set_patterns -external patterns_new.stil
 run_fault_sim
 
+report_summaries > report_summaries_python_script.txt
+
 quit

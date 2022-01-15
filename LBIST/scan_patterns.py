@@ -22,7 +22,7 @@ def update_lfsr(lfsr_equation):
 N = 16  # number of scan chains
 T = 199 # longest scan chain, 203 minos
 L = 10  # number of long scan chain
-PATH_FOR_SEDD = 200
+PATH_FOR_SEDD = 1000
 
 scan_chain = [0] * N
 app_chain = [0] * L
